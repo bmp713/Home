@@ -1,0 +1,441 @@
+/* Override CSS default settings */
+*{ margin: 0px; border: 0px; padding: 0px; box-sizing: border-box; 
+text-decoration: none; font-family: sans-serif, times; }
+/* Minimum required to center div is margin: auto and specified width used by CSS to calculate margins.
+   Width spans entire line by default. No height required because content dictates.
+   All divs parents must be at least positioned relative to set child absolute. 
+   Setting a div to dsiplay none and back re-triggers animation on scroll. */
+body{ 
+ 	background: url("assets/images/background.jpg") no-repeat fixed;
+	background-size: cover;
+}
+#video_container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(10, 10, 10, 1);
+}
+#video_container video{
+	position: relative;
+	z-index: -99;
+}
+#header{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: 150px;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	padding: 0px 25px 0px 25px;
+
+	text-align: left;
+	font: 36px sans-serif, times;
+	font-weight: 900;
+	color: lightgray;
+
+	background: url("assets/images/apple_keys.jpg") no-repeat fixed; 
+	background-size: cover;
+
+	filter: saturate(50%);
+	transition: filter 1s, color 1s;
+	animation: height 2s, fadein 2s;
+}
+#header:hover{
+	transition: filter 1s, color 1s;
+	filter: saturate(0%);
+	color: white;
+}
+	#header_1{
+		font: 48px sans-serif;
+		animation: fadein 5s;
+	}
+	#header_2{
+		float: right;
+		padding-top: 5px;
+		color: rgba(10, 10, 10, 0.7);
+		font: 20px sans-serif;
+		animation: fadein 5s;
+	}
+	#resume{
+		float: right;
+		font-size: 16px;
+		cursor: pointer;
+		color: darkred;
+		transition: color 0.5s;
+		animation: fadein 10s;
+	}
+	#resume:hover{
+		transition: color 0.5s;
+		color: red;
+	}
+
+#navbar{
+	position: relative;
+	width: 100%;
+	z-index: 2;
+	top: 0px;
+	padding: 0px;
+}
+	#navbar a{
+		position: relative;
+		float: left;
+		width: 25%;	
+		height: 40px;
+		padding: 10px 0px 10px 0px;
+
+		color: rgba(200, 200, 200, 1);
+		text-align: center;
+		cursor: pointer;
+		font: 16px sans-serif;
+		background: rgba( 50, 50, 50, 0.6);
+   		transition: color 1s, background 1s;
+   		animation: fadein 5s;
+	}
+	#navbar a:hover{    	
+		transition: color 1s, background 1s;
+		background: rgba( 75, 75, 75, 0.9);
+	   	color: white;
+	}
+
+#wrapper{
+	position: relative;
+	margin: auto;
+	width: 80%;
+}
+#content{
+	position: relative;
+	width: 100%;
+	animation: fadein 2s;
+}
+
+	#content_1{
+		position: relative;
+		margin: 0px auto;
+		padding: 200px 50px 500px 50px;
+		float: left; /* Parent of floated elements must be float/clear or specific height */
+		width: 100%;
+		color: white;
+		text-align: center;
+		background: rgba(1, 1, 1, 0.7);
+	  	transition: color 1s, background 1s;
+	}
+	#content_1:hover{
+	  	transition: color 1s, background 1s;
+		background: rgba(1, 1, 1, 0.8);
+	  	color: lightgray;
+	}
+		#box_1{
+			position: relative;
+			margin: auto;
+			width: 100%;
+			padding: 50px 0px 100px 0px;
+		}
+		#box_1 p{
+			font: 16px sans-serif, times;			
+		}
+		#box_1 a{
+			float: none;
+			cursor: pointer;
+			padding: 0.8% 5% 0.8% 5%;
+
+			font: 16px sans-serif, times;
+			color: rgba(200, 200, 200, 1);
+			background: rgba(50, 1, 1, 0.7);
+			border: 2px solid rgba(255, 255, 255, 0.7);
+			transition: background 1s, color 1s, border 1s;
+		}
+		#box_1 a:hover{
+			transition: background 1s, color 1s, border 1s;
+			background: rgba(50, 1, 1, 0);
+			border: 2px solid white;
+			color: white;
+		}
+
+	#content_2{
+		position: relative;
+		float: left;
+		width: 100%;
+		margin: 0px auto;
+		padding: 200px 0px 500px 0px;
+
+		color: rgba(255, 255, 255, 0.7);
+		text-align: left;
+		font: 30px sans-serif, times;
+		background: url("assets/images/canyon_2 (2).jpeg") no-repeat fixed; 
+		background-size: cover;
+	  	transition: background 1s, color 1s;
+	}
+
+	#content_2:hover{
+	  	transition: background 1s, color 1s;
+		//background: rgba(1, 1, 1, 0.5);
+	  	color: white;
+	}
+	#content_2 p{
+		position: relative;
+		margin: auto;
+		width: 50%;
+		text-align:left;
+		font:16px sans-serif;
+	}
+
+	#content_3{
+		position: relative;
+		margin: 0px auto;
+		padding: 200px 0px 500px 0px;
+		float: left; /* Parent of floated elements must be float/clear or specific height */
+		width: 100%;
+		color: rgba(255, 255, 255, 0.7);
+		text-align: right;
+		font: 30px sans-serif, times;
+		//background: rgba(1, 1, 1, 0.8);
+		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
+	  	background-size: cover;	
+		transition: color 1s;
+	}
+	#content_3:hover{
+		transition: color 1s;
+		color: white;
+	}
+	#content_3 p{
+		position: relative;
+		margin: auto;
+		width: 80%;
+		text-align:right;
+		font: 16px sans-serif;
+	}
+
+	#footer{
+		position: relative;
+		padding: 200px 0px 400px 0px;
+		margin: 0px auto;
+		clear: both;
+		width: 100%;
+
+		color: rgba(200, 200, 200, 1);
+		text-align: center;
+		font: 16px sans-serif, times;
+		background: url("assets/images/water_drop (5).jpg") no-repeat fixed; 
+	  	background-size: cover;		
+	  	transition: color 1s, filter 1s;
+	}
+	#footer:hover{
+	  	transition: color 1s, filter 1s;
+		color: white;
+	}
+	#footer p{
+		position: relative;
+		margin: auto;
+		width: 80%;
+		text-align: left;
+		font: 16px sans-serif;
+	}
+
+	#copyright{
+		position: fixed;
+		clear: both;
+		bottom: 0;
+		width: 100%;
+		height: 40px;
+		padding: 10px 10px 15px 10px;
+
+		text-align: left;
+		font: 14px sans-serif;
+		color: rgba(255, 255, 255, 0.7);
+		background: rgba(1, 1, 1, 0.5);
+		transition: background 1s, color 1s, height 1s;
+	}
+	#copyright:hover{	
+		transition: background 1s, color 1s, height 1s;
+		background: rgba(50, 50, 50, 0.9);
+		color: rgba(255, 255, 255, 0.7);
+		height: 150px;
+	}
+		#copyright_1{
+		}
+		#copyright_2{
+			float: right;
+		}
+
+
+@keyframes dropdown{
+	from{	top: -1000;	}
+	to{		top = 0;	}
+}
+@keyframes height{
+	from {	height: 1200px;
+	}
+	to{		height: 150px;	
+	}
+}
+@keyframes fadein{
+	from{ 	opacity: 0; }
+   	to  { 	opacity: 1; }
+}
+
+
+@media( max-width: 768px ){
+
+	#video_container video{
+		display: none;
+	}
+
+	#wrapper{
+		position: relative;
+		margin: auto;
+		width: 100%;
+	}
+	#header{
+		height: 100px;
+		margin: 0px 0px 0px 0px;
+		padding: 0px 25px 0px 25px;
+		text-align: center;
+		animation: height 1s, fadein 1s;
+	}
+		#header_1{
+			font: 36px sans-serif;
+		}
+		#header_2{
+			float: none;
+			display: none; /* display block move from inline to stacked */
+			padding-top: none;
+			font: 16px sans-serif;
+			color: rgba(200, 200, 200, 1);
+		}
+
+		#resume{
+			float: none;
+			text-align: center;
+			cursor: pointer;
+			color: red;
+		}
+
+	#navbar{
+		position: relative;
+	}
+	#navbar a{
+		width: 25%;	
+		height: 50px;
+		padding: 15px 0px 10px 0px;
+
+		font-size: 14px;
+		background: rgba(50, 50, 50, 1);
+	   	animation: fadein 2s;
+	}
+	#navbar a:hover{
+		background: rgba(100, 100, 100, 1);
+	}
+
+
+
+
+	#content_1{
+		position: relative;
+		margin: 0px auto;
+		padding: 50px 50px 100px 50px;
+		float: left; /* Parent of floated elements must be float/clear or specific height */
+		width: 100%;
+
+		color: white;
+		text-align: center;
+		background: url("assets/images/chicago-skycrapers-above-080514 (2).jpg") no-repeat fixed; 
+	  	background-size: cover;		  	
+	  	transition: none;
+	}
+	#content_1:hover{
+	  	transition: none;
+	  	background: url("assets/images/chicago-skycrapers-above-080514 (2).jpg") no-repeat fixed; 
+	  	background-size: cover;	
+	}
+		#box_1{
+			position: relative;
+			margin: auto;
+			width: 100%;
+			padding: 50px 0px 50px 0px;
+		}
+		#box_1 a{
+			float: none;
+			display: block; /* Changes links from inline to stacked. */
+			padding: 2.5% 0 2.5% 0;
+			margin: 5%;
+
+			cursor: pointer;			
+			font: 16px sans-serif, times;
+			color: rgba(200, 200, 200, 1);
+			background: rgba(1, 1, 50, 0.7);
+			border: 2px solid rgba(255, 255, 255, 0.7);
+			transition: background 1s, color 1s, border 1s;
+		}
+		#box_1 a:hover{
+			transition: background 1s, color 1s, border 1s;
+			background: rgba(1, 1, 50, 0);
+			border: 2px solid white;
+			color: white;
+		}
+
+
+
+
+	#content_2{
+		padding: 100px 25px 100px 30px;
+		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
+	  	background-size: cover;	
+		color: white;
+	}
+	#content_2 p{
+		width: 80%;
+		text-align: left;
+	}
+
+	#content_3{
+		padding: 100px 25px 100px 30px;
+		background: url("assets/images/typing_beige_blur.png") no-repeat fixed; 
+	  	background-size: cover;	
+	  	color: white;
+	}
+	#content_3 p{
+		width: 80%;
+		text-align: left;
+	}
+
+	#footer{
+		color: white;
+		padding: 100px 25px 100px 30px;
+	}
+	#footer p{
+		width: 80%;
+		text-align: left;
+	}
+
+	#resume{
+		float: none;
+		font-size: 16px;
+	}
+
+	#copyright{
+		position: relative;
+		clear: both;
+		bottom: 0;
+		width: 100%;
+		height: 75px;
+		padding: 10px 10px 15px 10px;
+
+		text-align: left;
+		font: 14px sans-serif;
+		color: rgba(255, 255, 255, 0.7);
+		background: rgba(50, 50, 50, 0.9);
+		transition: background 1s, color 1s, height 1s;
+	}
+	#copyright_2{
+		float: left;
+	}
+	#copyright{
+
+	}
+
+}
+
+
+
