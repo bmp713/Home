@@ -9,6 +9,26 @@ body{
  	background: url("assets/images/background.jpg") no-repeat fixed;
 	background-size: cover;
 }
+
+#name{
+	display: none; /* Only display if mobile view */
+	padding: 50px 0px 0px 0px;
+	font: 42px sans-serif; /* Title size decreases size in mobile view */
+}
+#title{
+	font: 36px sans-serif; /* Title size decreases size in mobile view */
+	padding: 0px 0px 50px 0px;
+}
+#resume_mobile{
+	display: none;
+	padding: 0px 0px 50px 0px;
+
+	font-size: 16px;
+	cursor: pointer;
+	color: darkred;
+	animation: fadein 2s;
+}
+
 #video_container{
 	position: fixed;
 	top: 0;
@@ -35,17 +55,12 @@ body{
 	font-weight: 900;
 	color: lightgray;
 
-	background: url("assets/images/apple_keys.jpg") no-repeat fixed; 
+	background: url("assets/images/apple_keys (2).jpg") no-repeat fixed; 
 	background-size: cover;
 
-	filter: saturate(50%);
 	transition: filter 1s, color 1s;
-	animation: height 2s, fadein 2s;
-}
-#header:hover{
-	transition: filter 1s, color 1s;
-	filter: saturate(0%);
-	color: white;
+	//animation: height 2s, fadein 2s;
+	animation: fadein 2s;
 }
 	#header_1{
 		font: 48px sans-serif;
@@ -54,19 +69,19 @@ body{
 	#header_2{
 		float: right;
 		padding-top: 5px;
-		color: rgba(10, 10, 10, 0.7);
+		color: rgba(200, 200, 200, 0.7);
 		font: 20px sans-serif;
-		animation: fadein 5s;
+		animation: fadein 2s;
 	}
-	#resume{
+	#resume_header{
 		float: right;
 		font-size: 16px;
 		cursor: pointer;
 		color: darkred;
 		transition: color 0.5s;
-		animation: fadein 10s;
+		animation: fadein 5s;
 	}
-	#resume:hover{
+	#resume_header:hover{
 		transition: color 0.5s;
 		color: red;
 	}
@@ -142,13 +157,13 @@ body{
 
 			font: 16px sans-serif, times;
 			color: rgba(200, 200, 200, 1);
-			background: rgba(50, 1, 1, 0.7);
+			background: rgba(1, 1, 50, 0.7);
 			border: 2px solid rgba(255, 255, 255, 0.7);
 			transition: background 1s, color 1s, border 1s;
 		}
 		#box_1 a:hover{
 			transition: background 1s, color 1s, border 1s;
-			background: rgba(50, 1, 1, 0);
+			background: rgba(1, 1, 50, 0);
 			border: 2px solid white;
 			color: white;
 		}
@@ -170,7 +185,6 @@ body{
 
 	#content_2:hover{
 	  	transition: background 1s, color 1s;
-		//background: rgba(1, 1, 1, 0.5);
 	  	color: white;
 	}
 	#content_2 p{
@@ -190,7 +204,6 @@ body{
 		color: rgba(255, 255, 255, 0.7);
 		text-align: right;
 		font: 30px sans-serif, times;
-		//background: rgba(1, 1, 1, 0.8);
 		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
 	  	background-size: cover;	
 		transition: color 1s;
@@ -254,16 +267,14 @@ body{
 		height: 150px;
 	}
 		#copyright_1{
+			float: left;
+			color: darkred;
 		}
 		#copyright_2{
 			float: right;
 		}
 
 
-@keyframes dropdown{
-	from{	top: -1000;	}
-	to{		top = 0;	}
-}
 @keyframes height{
 	from {	height: 1200px;
 	}
@@ -277,6 +288,13 @@ body{
 
 
 @media( max-width: 768px ){
+
+	#title{
+		display: block;
+	}
+	#name{
+		display: none;
+	}
 
 	#video_container video{
 		display: none;
@@ -328,9 +346,6 @@ body{
 		background: rgba(100, 100, 100, 1);
 	}
 
-
-
-
 	#content_1{
 		position: relative;
 		margin: 0px auto;
@@ -352,13 +367,13 @@ body{
 		#box_1{
 			position: relative;
 			margin: auto;
-			width: 100%;
-			padding: 50px 0px 50px 0px;
+			width: 70%;
+			padding: 0px 0px 50px 0px;
 		}
 		#box_1 a{
 			float: none;
 			display: block; /* Changes links from inline to stacked. */
-			padding: 2.5% 0 2.5% 0;
+			padding: 5% 0 5% 0;
 			margin: 5%;
 
 			cursor: pointer;			
@@ -374,9 +389,6 @@ body{
 			border: 2px solid white;
 			color: white;
 		}
-
-
-
 
 	#content_2{
 		padding: 100px 25px 100px 30px;
@@ -412,6 +424,7 @@ body{
 	#resume{
 		float: none;
 		font-size: 16px;
+		color: darkblue;
 	}
 
 	#copyright{
