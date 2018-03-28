@@ -9,23 +9,25 @@
 </head>
 
 <body>
-	<a onclick="smoothScroll('footer')">
 	<div id="header">
-
 		<h1 id="header_1">Brandon M Piper<span id="header_2">Software Engineer/Web Developer</span></h1>
-		<a id="resume_header" download href="Resume_7.doc">
+		<a id="resume_header" download href="Resume.doc">
 			Resume (.doc)
 		</a><br>
 	</div>
-	</a>
 
-	<div id="navbar">
-	    <a id="nav_1" onclick="smoothScroll('content_1')">Portfolio</a>
-        <a id="nav_2" onclick="smoothScroll('content_2')">Background</a>
-        <a id="nav_3" onclick="smoothScroll('content_3')">Experience</a>
-        <a id="nav_4" onclick="smoothScroll('footer')">Education</a>
+	<div id="navbar" class="navbar">
+	    <a href="#content_1">Portfolio</a>
+       	<a href="#content_2">Background</a>
+       	<a href="#content_3">Experience</a>
+       	<a href="#content_4">Education</a>
 	</div>
-	
+	<!--<div id="navbar">
+		    <a onclick="smoothScroll('content_1')">Portfolio</a>
+        	<a onclick="smoothScroll('content_2')">Background</a>
+        	<a onclick="smoothScroll('content_3')">Experience</a>
+        	<a onclick="smoothScroll('footer')">Education</a>
+		</div>-->
 	<div id="wrapper">
 
     	<div id="video_container">
@@ -38,134 +40,151 @@
 		<div id="content">
 
 			<div id="content_1">
+				<div class="background">
+					<!-- Name only displayed in mobile view -->
+					<h2 id="name">
+						Brandon M Piper
+					</h2>
 
-				<!-- Name only displayed in mobile view -->
-				<p id="name">
-					Brandon M Piper
-				</p><br>
+					<h3 id="title">Software Engineer</h3>
+					<p id="portfolio">Portfolio</p><br>
 
-				<h3 id="title">Software Engineer/Web Developer</h3>
+					<div id="box_1">
+						<a target="#" href='Techbook/index.php'>Techbook</a>
+						<a target="#" href='Ferrari/index.html'>Ferrari</a>
+						<a target="#" href='AJAX/index.html'>Javascript</a>
+						<a target="#" href='Arches/index.html'>Arches</a>
+					</div>
 
-				<a download href="Resume_7.doc">
-					<h3 id="resume_mobile" >Resume (.doc)</h3>
-				</a>
-
-				<div id="box_1">
-					<a target="#" href='Techbook/index.html'>Techbook</a>
-					<a target="#" href='Ferrari/index.html'>Ferrari</a>
-					<a target="#" href='AJAX/index.html'>Javascript</a>
-					<a target="#" href='Arches/index.html'>Arches</a>
+					<p>All sites linked to this page are custom developed.</p><br>
+					<p>Source code at <a style="color:rgba(150,150,150,1)" target="#" href="http://www.github.com/bmp713">Github.com</a></p>
 				</div>
 
-				<p>All sites linked to this page are custom developed.</p>
-				<p>Source code at <a style="color:rgba(150,150,150,1)" target="#" href="http://www.github.com/bmp713">Github.com</a></p>
-			
 			</div>
 
 			<div id="content_2">
-				<p>
-					<span style="font-size:32px">
-					BACKGROUND<br><br></span>
 
-					"Scientists study the world as it is. Engineers create the world that has never been."<br>
-					Theodore von Karman<br><br>
+				<div class="background">
+					<p>
+						<span style="font-size:32px">
+						BACKGROUND<br><br></span>
 
-					No matter how amazing an idea can be if you can't communicate effectively it becomes useless. 
-					I see software as the most powerful tool we have ever created to communicate ideas. In addition 
-					to technical skills, I believe that developing a strong artistic intuition is important for 
-					innovation, and is reflected in the quality, performance, and reception of new technology.<br><br>
+						"Scientists study the world as it is. Engineers create the world that has never been."<br>
+						Theodore von Karman<br><br>
 
-					I am a web developer and software engineer seeking employment near Los Angeles or remotely. 
-					I have several years of industry experience and over the past year have learned full stack web 
-					development. I first focused on learning vanilla HTML, CSS, Javascript, PHP, and MySQL to 
-					understand how libraries such as Bootstrap, Angular, and jQuery work under the hood. I have learned 
-					about MVC using the MEAN and Laravel frameworks.<br><br>
+						I see software as the most powerful tool we have ever created to communicate ideas. 
+						No matter how amazing an idea can be if you can't communicate effectively it becomes useless. 
+						In addition to technical skills, I believe that developing a strong artistic intuition is important for 
+						innovation, and is reflected in the quality, performance, and reception of new technology.<br><br>
 
-					I am also experienced with technical writing, presentation preparation, tutoring software concepts, 
-					leadership, graphic design, photography, video, audio, and image editing.<br><br>
+						I am a web developer and software engineer seeking employment near Los Angeles or remotely. 
+						I have several years of industry experience and over the past year have learned full stack web 
+						development. I first focused on learning vanilla HTML, CSS, Javascript, PHP, and MySQL to 
+						understand how libraries such as Bootstrap, Angular, and jQuery work under the hood. I have learned 
+						about MVC using the MEAN and Laravel frameworks.<br><br>
 
-					Brandon Michael Piper<br>
-					Web Developer/Software Engineer<br>
-					bmp713@yahoo.com<br>
-					Los Angeles, CA<br>
-					(831) 419-0137<br><br>
-				</p>
+						I am also experienced with technical writing, presentation preparation, tutoring software concepts, 
+						leadership, graphic design, photography, video, audio, and image editing.<br><br>
+
+						Brandon Michael Piper<br><br>
+						Web Developer/Software Engineer<br>
+						bmp713@yahoo.com<br>
+						Los Angeles, CA<br>
+						(831) 419-0137<br><br>
+					</p>
+				</div>
+
 			</div>
 
 			<div id="content_3">
-				<p>
-					<span style="font-size:32px">
-					SOFTWARE EXPERIENCE</span>
-				</p><br><br>
-				<p>
-					Web Development (2016-Present)<br>
-					▪ Learned full stack web development<br>
-					▪ Learned HTML, CSS, Javascript, PHP, MySQL, Laravel, Angular, Node<br>
-					▪ Learned all layers of web stack using LAMP/XAMPP on remote host and virtual localhost<br>
-					▪ Learned theory behind responsive design and layout<br><br>
+				<div class="background">
+					<p>
+						<span style="font-size:32px">
+						SOFTWARE EXPERIENCE</span><br><br>
 
-					VeriSign - Mountain View, CA<br>
-					Quality Assurance Engineer (2007-2009)<br>
-					▪ Developed automation testing for SSL certificate customer service website<br>
-					▪ Developed large number of testing cases using custom methodology<br>
-					▪ Maintained suites of WinRunner scripts<br><br>
+						Web Development (2016-Present)<br>
+						▪ Learned full stack web development<br>
+						▪ Learned HTML, CSS, Javascript, PHP, MySQL, Laravel, Angular, Node<br>
+						▪ Learned all layers of web stack using LAMP/XAMPP on remote host and virtual localhost<br>
+						▪ Learned theory behind responsive design and layout<br><br>
 
-					Lynx Software - San Jose, CA<br>
-					Quality Assurance Engineer (2006-2007)<br>
-					▪ Reverse engineered embedded operating system in C to uncover potential vulnerabilities<br>
-					▪ Developed and maintained Bash automation scripts<br>
-					▪ Provided training for new employees<br>
-					▪ Wrote employee training manual<br><br>
+						VeriSign - Mountain View, CA<br>
+						Quality Assurance Engineer (2007-2009)<br>
+						▪ Developed automation testing for SSL certificate customer service website<br>
+						▪ Developed large number of testing cases using custom methodology<br>
+						▪ Maintained suites of WinRunner scripts<br><br>
 
-					University of California, Santa Cruz<br>
-					Academic Tutor (2004-2005)<br>
-					▪ Tutored engineering students in data structures and algorithms with C and Java<br>
-					▪ Led group tutoring sessions for Multicultural Engineering Program<br>
-					▪ Tutored students of varying learning styles and disabilities<br>
-				</p>	
+						Lynx Software - San Jose, CA<br>
+						Quality Assurance Engineer (2006-2007)<br>
+						▪ Reverse engineered embedded operating system in C to uncover potential vulnerabilities<br>
+						▪ Developed and maintained Bash automation scripts<br>
+						▪ Provided training for new employees<br>
+						▪ Wrote employee training manual<br><br>
+
+						University of California, Santa Cruz<br>
+						Academic Tutor (2004-2005)<br>
+						▪ Tutored engineering students in data structures and algorithms with C and Java<br>
+						▪ Led group tutoring sessions for Multicultural Engineering Program<br>
+						▪ Tutored students of varying learning styles and disabilities<br>
+					</p>	
+				</div>
+
+			</div>
+
+			<div id="content_4">
+				<div class="background"">
+					<p><span style="font-size:32px">
+						EDUCATION AND INTERESTS</span><br><br>
+
+						B.S. Computer Engineering<br>
+						University of California, Santa Cruz<br><br>
+
+						RELEVANT COURSEWORK<br><br>
+						▪ Advanced Programming ▪ Computer Architecture ▪ Abstract Data Types/Algorithms<br>
+						▪ Assembly Programming ▪ Computer Networking ▪ Analog Electronic Circuits<br>
+						▪ Operating Systems ▪ Technical Writing ▪ Advanced Statistics<br>
+						▪ Advanced Microprocessor Design ▪ Advanced Logic Design<br>
+						▪ Senior project leader for ground penetrating radar<br><br>
+
+						Information about completed courses and degree:<br>
+						<a style="color:lightblue;" href="http://soe.ucsc.edu" target="#">soe.ucsc.edu/courses/</a><br><br>
+
+						OTHER INTERESTS<br><br>
+						▪ Photography, music, guitar, writing, philosophy, hiking, running, skiing<br><br>
+
+						SOCIAL MEDIA<br><br>
+						<a style="color:lightblue;" target="#" href="http://facebook.com/brandon.piper.391">Facebook</a><br>
+						<a style="color:lightblue;" target="#" href="http://linkedin.com/in/brandon-piper-3311922">LinkedIn</a><br>
+						<a style="color:lightblue;" target="#" href="http://flickr.com/photos/73331357@N00">Flickr</a><br><br>
+					</p>
+				</div>
+
 			</div>
 
 		</div> <!-- End content -->
 
-		<div id="footer">
-			<p><span style="font-size:32px">
-				EDUCATION AND INTERESTS</span>
-			</p><br>
-			<p>
-				B.S. Computer Engineering<br>
-				University of California, Santa Cruz<br><br>
-
-				RELEVANT COURSEWORK<br>
-				▪ Advanced Programming ▪ Computer Architecture ▪ Abstract Data Types/Algorithms<br>
-				▪ Assembly Programming ▪ Computer Networking ▪ Analog Electronic Circuits<br>
-				▪ Operating Systems ▪ Technical Writing ▪ Advanced Statistics<br>
-				▪ Advanced Microprocessor Design ▪ Advanced Logic Design<br>
-				▪ Senior project leader for ground penetrating radar<br><br>
-
-				Information about completed courses and degree:<br>
-				http://www.soe.ucsc.edu/courses/<br><br>
-
-				OTHER INTERESTS<br>
-				▪ Photography, music, guitar, writing, philosophy, hiking, running, skiing<br><br>
-
-				SOCIAL MEDIA<br>
-				<a style="color:lightblue;" target="#" href="http://facebook.com/brandon.piper.391">Facebook</a><br>
-				<a style="color:lightblue;" target="#" href="http://linkedin.com/in/brandon-piper-3311922">LinkedIn</a><br>
-				<a style="color:lightblue;" target="#" href="http://flickr.com/photos/73331357@N00">Flickr</a><br><br>
-			</p>
-		
-		</div>
-
 	</div>	<!-- End wrapper -->
 
-	<a onclick="smoothScroll('header')">
-		<div id="copyright">
-			<span><a download href="Resume_7.doc">
-				<h3 id="copyright_1">Resume (.doc)</h3>
-			</a></span>
-			<span id="copyright_2">&copy;Copyright 2018 Brandon Michael Piper.</span>
+	<div id="copyright">
+
+		<span style="color:lightgray;font:18px sans-serif;">Portfolio Menu</span>
+
+		<span id="copyright_2">
+			&copy;2018 Brandon M Piper
+		</span><br><br>
+	    
+	    <div class="navbar" style="width:50%">
+		    <a class="navbar_copyright" target="#" href="Techbook/index.php">Techbook</a>
+			<a target="#" href="Ferrari/index.html">Ferrari</a>
+			<a target="#" href="AJAX/index.html">AJAX</a>
+			<a target="#" href="Arches/index.html">Arches</a>
 		</div>
-	</a>
+
+		<a id="copyright_1" download href="Resume.doc" style="float:right">
+			Resume (.doc)
+		</a>
+
+	</div>
 
 </body>
 </html>

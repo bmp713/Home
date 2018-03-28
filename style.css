@@ -1,33 +1,10 @@
 /* Override CSS default settings */
-*{ margin: 0px; border: 0px; padding: 0px; box-sizing: border-box; 
+*{ margin: 0; border: 0px; padding: 0px; box-sizing: border-box; 
 text-decoration: none; font-family: sans-serif, times; }
 /* Minimum required to center div is margin: auto and specified width used by CSS to calculate margins.
    Width spans entire line by default. No height required because content dictates.
    All divs parents must be at least positioned relative to set child absolute. 
    Setting a div to dsiplay none and back re-triggers animation on scroll. */
-body{ 
- 	background: url("assets/images/background.jpg") no-repeat fixed;
-	background-size: cover;
-}
-
-#name{
-	display: none; /* Only display if mobile view */
-	padding: 50px 0px 0px 0px;
-	font: 42px sans-serif; /* Title size decreases size in mobile view */
-}
-#title{
-	font: 36px sans-serif; /* Title size decreases size in mobile view */
-	padding: 0px 0px 50px 0px;
-}
-#resume_mobile{
-	display: none;
-	padding: 0px 0px 50px 0px;
-
-	font-size: 16px;
-	cursor: pointer;
-	color: darkred;
-	animation: fadein 2s;
-}
 
 #video_container{
 	position: fixed;
@@ -55,12 +32,18 @@ body{
 	font-weight: 900;
 	color: lightgray;
 
-	background: url("assets/images/apple_keys (2).jpg") no-repeat fixed; 
-	background-size: cover;
-
-	transition: filter 1s, color 1s;
-	//animation: height 2s, fadein 2s;
+	background: url("assets/images/glass (3).jpg") no-repeat fixed; 
+	background-size: 100%;
+	box-shadow: none;
+	transition: color 1s, background 1s, box-shadow 1s;
 	animation: fadein 2s;
+}
+#header:hover{
+	transition: color 1s, background 1s, box-shadow 1s;
+	background: url("assets/images/glass (3).jpg") no-repeat fixed; 
+	background-size: 100%;
+	box-shadow: 15px 15px 50px black;
+	color: white;
 }
 	#header_1{
 		font: 48px sans-serif;
@@ -77,23 +60,25 @@ body{
 		float: right;
 		font-size: 16px;
 		cursor: pointer;
-		color: darkred;
-		transition: color 0.5s;
+		color: rgba(1, 1, 150, 1);
+		transition: color 1s;
 		animation: fadein 5s;
 	}
 	#resume_header:hover{
-		transition: color 0.5s;
-		color: red;
+		transition: color 1s;
+		color: white;
 	}
 
-#navbar{
-	position: relative;
+.navbar{
+	position: absolute;
 	width: 100%;
 	z-index: 2;
-	top: 0px;
-	padding: 0px;
+	top: 150;
+	left: 0;
 }
-	#navbar a{
+	.navbar a{
+   		animation: fadein 2s;
+
 		position: relative;
 		float: left;
 		width: 25%;	
@@ -104,42 +89,76 @@ body{
 		text-align: center;
 		cursor: pointer;
 		font: 16px sans-serif;
-		background: rgba( 50, 50, 50, 0.6);
-   		transition: color 1s, background 1s;
-   		animation: fadein 5s;
+		background: rgba( 50, 50, 50, 0.8);
+
+		box-shadow: none;
+   		transition: color 1s, background 1s, box-shadow 1s;
 	}
-	#navbar a:hover{    	
-		transition: color 1s, background 1s;
-		background: rgba( 75, 75, 75, 0.9);
+	.navbar a:hover{    	
+		transition: color 1s, background 1s, box-shadow 1s;
+		box-shadow: 15px 15px 50px black;
+		background: rgba( 75, 75, 75, 1);
 	   	color: white;
 	}
+
 
 #wrapper{
 	position: relative;
 	margin: auto;
 	width: 80%;
 }
+	#name{
+		display: none; /* Only display if mobile view */
+		padding: 50px 0px 0px 0px;
+		font: 36px sans-serif; /* Title size decreases size in mobile view */
+	}
+	#title{
+		display: none;
+		font: 36px sans-serif; /* Title size decreases size in mobile view */
+		padding: 0px 0px 50px 0px;
+	}
+	#portfolio{
+		font: 36px sans-serif;
+	}
+
+	.background{
+		width: 100%;
+		padding: 75px 50px;
+		background: rgba(5, 5, 5, 0.5);
+		box-shadow: none;
+		transition: background 1s, box-shadow 1s, padding 1s;
+	}
+	.background:hover{
+		transition: background 1s, box-shadow 1s, padding 1s;
+		//padding: 100px 75px;
+		background: rgba(5, 5, 5, 0.7);
+		box-shadow: 15px 15px 50px black;
+	}
+
+
 #content{
 	position: relative;
 	width: 100%;
-	animation: fadein 2s;
 }
+
 
 	#content_1{
 		position: relative;
-		margin: 0px auto;
-		padding: 200px 50px 500px 50px;
+		margin: 0px 0px;
+		padding: 150px 50px 350px 50px;
 		float: left; /* Parent of floated elements must be float/clear or specific height */
 		width: 100%;
-		color: white;
+		color: lightgray;
 		text-align: center;
-		background: rgba(1, 1, 1, 0.7);
-	  	transition: color 1s, background 1s;
+		background: url("assets/images/typing_blue (2).png") no-repeat fixed; 
+		background-size: cover;
+	  	transition: color 1s;
 	}
 	#content_1:hover{
-	  	transition: color 1s, background 1s;
-		background: rgba(1, 1, 1, 0.8);
-	  	color: lightgray;
+	  	transition: color 1s;
+	  	background: url("assets/images/typing_blue (2).png") no-repeat fixed; 
+		background-size: cover;
+	  	color: white;
 	}
 		#box_1{
 			position: relative;
@@ -168,12 +187,13 @@ body{
 			color: white;
 		}
 
+
 	#content_2{
 		position: relative;
 		float: left;
 		width: 100%;
 		margin: 0px auto;
-		padding: 200px 0px 500px 0px;
+		padding: 200px 0px 200px 0px;
 
 		color: rgba(255, 255, 255, 0.7);
 		text-align: left;
@@ -182,23 +202,23 @@ body{
 		background-size: cover;
 	  	transition: background 1s, color 1s;
 	}
-
 	#content_2:hover{
 	  	transition: background 1s, color 1s;
 	  	color: white;
 	}
-	#content_2 p{
-		position: relative;
-		margin: auto;
-		width: 50%;
-		text-align:left;
-		font:16px sans-serif;
-	}
+		#content_2 p{
+			position: relative;
+			margin: 0px auto;
+			width: 50%;
+			text-align:left;
+			font:16px sans-serif;
+		}
+
 
 	#content_3{
 		position: relative;
 		margin: 0px auto;
-		padding: 200px 0px 500px 0px;
+		padding: 200px 0px 200px 0px;
 		float: left; /* Parent of floated elements must be float/clear or specific height */
 		width: 100%;
 		color: rgba(255, 255, 255, 0.7);
@@ -212,17 +232,18 @@ body{
 		transition: color 1s;
 		color: white;
 	}
-	#content_3 p{
-		position: relative;
-		margin: auto;
-		width: 80%;
-		text-align:right;
-		font: 16px sans-serif;
-	}
+		#content_3 p{
+			position: relative;
+			margin: auto;
+			width: 80%;
+			text-align:right;
+			font: 16px sans-serif;
+		}
 
-	#footer{
+
+	#content_4{
 		position: relative;
-		padding: 200px 0px 400px 0px;
+		padding: 200px 0px 500px 0px;
 		margin: 0px auto;
 		clear: both;
 		width: 100%;
@@ -230,21 +251,31 @@ body{
 		color: rgba(200, 200, 200, 1);
 		text-align: center;
 		font: 16px sans-serif, times;
-		background: url("assets/images/water_drop (5).jpg") no-repeat fixed; 
-	  	background-size: cover;		
-	  	transition: color 1s, filter 1s;
+		background: rgba(20, 20, 20, 0.5);
+	  	transition: color 1s, background 1s;
 	}
-	#footer:hover{
-	  	transition: color 1s, filter 1s;
+	#content_4:hover{
+	  	transition: color 1s, background 1s;
+	  	background: rgba(20, 20, 30, 0.7);
 		color: white;
 	}
-	#footer p{
-		position: relative;
-		margin: auto;
-		width: 80%;
-		text-align: left;
-		font: 16px sans-serif;
-	}
+		#content_4 p{
+			position: relative;
+			margin: auto;
+			width: 80%;
+			text-align: left;
+			font: 16px sans-serif;
+		}
+		#content_4 img{
+			float: left;
+			width: 65px;
+			padding: 5% 10% 0% 10%;
+			transition: width 1s;
+		}
+		#content_4 img:hover{
+			width: 100px;
+			transition: width 1s;
+		}
 
 	#copyright{
 		position: fixed;
@@ -255,25 +286,33 @@ body{
 		padding: 10px 10px 15px 10px;
 
 		text-align: left;
-		font: 14px sans-serif;
-		color: rgba(255, 255, 255, 0.7);
+		//font: 14px sans-serif;
+		color: rgba(255, 255, 255, 0.5);
 		background: rgba(1, 1, 1, 0.5);
 		transition: background 1s, color 1s, height 1s;
 	}
 	#copyright:hover{	
 		transition: background 1s, color 1s, height 1s;
-		background: rgba(50, 50, 50, 0.9);
+		background: rgba(50, 50, 50, 0.8);
 		color: rgba(255, 255, 255, 0.7);
 		height: 150px;
 	}
 		#copyright_1{
-			float: left;
-			color: darkred;
+			float: right;
+			color: white;
+			font-size: 16px;
+			transition: color 1s;
 		}
+		#copyright_1:hover{
+			transition: color 1s;
+			color: lightgray;
+		}		
 		#copyright_2{
 			float: right;
 		}
-
+		.navbar_copyright{
+			background: rgba(1, 1, 50, 0.7);
+		}
 
 @keyframes height{
 	from {	height: 1200px;
@@ -293,7 +332,7 @@ body{
 		display: block;
 	}
 	#name{
-		display: none;
+		display: block;
 	}
 
 	#video_container video{
@@ -305,7 +344,10 @@ body{
 		margin: auto;
 		width: 100%;
 	}
+
+
 	#header{
+		display: none;
 		height: 100px;
 		margin: 0px 0px 0px 0px;
 		padding: 0px 25px 0px 25px;
@@ -346,6 +388,15 @@ body{
 		background: rgba(100, 100, 100, 1);
 	}
 
+	#wrapper{
+		width: 100%;
+	}
+
+	.background{
+		padding: 50px 10px;
+	}
+
+
 	#content_1{
 		position: relative;
 		margin: 0px auto;
@@ -355,14 +406,14 @@ body{
 
 		color: white;
 		text-align: center;
-		background: url("assets/images/chicago-skycrapers-above-080514 (2).jpg") no-repeat fixed; 
-	  	background-size: cover;		  	
+		background: url("assets/images/apple_keys (2).jpg") no-repeat fixed; 
+	  	background-size: cover;
 	  	transition: none;
 	}
 	#content_1:hover{
 	  	transition: none;
-	  	background: url("assets/images/chicago-skycrapers-above-080514 (2).jpg") no-repeat fixed; 
-	  	background-size: cover;	
+		background: url("assets/images/apple_keys (2).jpg") no-repeat fixed; 
+	  	background-size: cover;
 	}
 		#box_1{
 			position: relative;
@@ -370,30 +421,43 @@ body{
 			width: 70%;
 			padding: 0px 0px 50px 0px;
 		}
-		#box_1 a{
-			float: none;
-			display: block; /* Changes links from inline to stacked. */
-			padding: 5% 0 5% 0;
-			margin: 5%;
+			#box_1 a{
+				float: none;
+				display: block; /* Changes links from inline to stacked. */
+				padding: 5% 0 5% 0;
+				margin: 5%;
 
-			cursor: pointer;			
-			font: 16px sans-serif, times;
-			color: rgba(200, 200, 200, 1);
-			background: rgba(1, 1, 50, 0.7);
-			border: 2px solid rgba(255, 255, 255, 0.7);
-			transition: background 1s, color 1s, border 1s;
-		}
-		#box_1 a:hover{
-			transition: background 1s, color 1s, border 1s;
-			background: rgba(1, 1, 50, 0);
-			border: 2px solid white;
-			color: white;
-		}
+				cursor: pointer;			
+				font: 16px sans-serif, times;
+				color: rgba(200, 200, 200, 1);
+				background: rgba(1, 1, 50, 0.7);
+				border: 2px solid rgba(255, 255, 255, 0.7);
+				transition: background 1s, color 1s, border 1s;
+			}
+			#box_1 a:hover{
+				transition: background 1s, color 1s, border 1s;
+				background: rgba(1, 1, 50, 0);
+				border: 2px solid white;
+				color: white;
+			}
+			#name{
+				display: block; /* Only display if mobile view */
+				padding: 50px 0px 0px 0px;
+				font: 36px sans-serif; /* Title size decreases size in mobile view */
+			}
+			#title{
+				display: block;
+				font: 16px sans-serif; /* Title size decreases size in mobile view */
+				padding: 0px 0px 50px 0px;
+			}
+			#portfolio{
+				font: 24px sans-serif;
+			}
 
 	#content_2{
 		padding: 100px 25px 100px 30px;
-		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
-	  	background-size: cover;	
+		background: url("assets/images/canyon_2 (2).jpeg") no-repeat fixed; 
+		background-size: cover;
 		color: white;
 	}
 	#content_2 p{
@@ -403,8 +467,8 @@ body{
 
 	#content_3{
 		padding: 100px 25px 100px 30px;
-		background: url("assets/images/typing_beige_blur.png") no-repeat fixed; 
-	  	background-size: cover;	
+	  	background: url("assets/images/desert (3).jpg") no-repeat fixed; 
+	  	background-size: cover;
 	  	color: white;
 	}
 	#content_3 p{
@@ -412,14 +476,26 @@ body{
 		text-align: left;
 	}
 
-	#footer{
+	#content_4{
 		color: white;
 		padding: 100px 25px 100px 30px;
+	  	background: url("assets/images/water_drop (5).jpg") no-repeat fixed; 
+		background-size: cover;
 	}
-	#footer p{
-		width: 80%;
-		text-align: left;
-	}
+		#content_4 p{
+			width: 80%;
+			text-align: left;
+		}
+		#content_4 img{
+			float: left;
+			width: 65px;
+			padding: 5% 10% 0% 10%;
+			transition: width 1s;
+		}
+		#content_4 img:hover{
+			width: 100px;
+			transition: width 1s;
+		}
 
 	#resume{
 		float: none;
@@ -441,11 +517,13 @@ body{
 		background: rgba(50, 50, 50, 0.9);
 		transition: background 1s, color 1s, height 1s;
 	}
-	#copyright_2{
+	#resume_copyright{
 		float: left;
+		color: rgba(255, 255, 255, 1);
+		font: 24px sans-serif;
 	}
-	#copyright{
-
+	#copyright_2{
+		float: right;
 	}
 
 }
