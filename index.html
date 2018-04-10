@@ -9,31 +9,26 @@
 </head>
 
 <body>
-	<div id="header">
-		<h1 id="header_1">Brandon M Piper<span id="header_2">Software Engineer/Web Developer</span></h1>
-		<a id="resume_header" download href="Resume.doc">
-			Resume (.doc)
-		</a><br>
-	</div>
-
-	<div id="navbar" class="navbar">
-	    <a href="#content_1">Portfolio</a>
-       	<a href="#content_2">Background</a>
-       	<a href="#content_3">Experience</a>
-       	<a href="#content_4">Education</a>
-	</div>
-	<!--<div id="navbar">
-		    <a onclick="smoothScroll('content_1')">Portfolio</a>
-        	<a onclick="smoothScroll('content_2')">Background</a>
-        	<a onclick="smoothScroll('content_3')">Experience</a>
-        	<a onclick="smoothScroll('footer')">Education</a>
-		</div>-->
 	<div id="wrapper">
 
+		<div id="header">
+			<h1 id="header_1">Brandon M Piper<span id="header_2">Software Engineer/Web Developer</span></h1>
+			<a id="resume_header" download href="Resume.doc">
+			Resume (.doc)
+			</a><br>
+		</div>
+
+		<div class="navbar" id="navbar">
+		    <a onclick="smoothScroll('navbar')">Portfolio</a>
+        	<a onclick="smoothScroll('content_2')">Background</a>
+        	<a onclick="smoothScroll('content_3')">Experience</a>
+        	<a onclick="smoothScroll('content_4')">Education</a>
+		</div>
+
     	<div id="video_container">
-       		<video id="Video" src="assets/video/Water_1.mp4" 
-       			   style="filter:brightness(40%)" autoplay loop muted>
-       			   <script>document.getElementById("Video").playbackRate = 0.75;</script>
+       		<video id="Video" src="assets/video/Water.mp4" 
+       			   style="filter:brightness(50%)" autoplay loop muted>
+       			   <script>document.getElementById("Video").playbackRate = 0.30;</script>
        		</video>
    		</div>
 
@@ -47,16 +42,19 @@
 					</h2>
 
 					<h3 id="title">Software Engineer</h3>
-					<p id="portfolio">Portfolio</p><br>
+					<p id="portfolio">
+						Portfolio | Web Development
+					</p><br>
 
 					<div id="box_1">
-						<a target="#" href='Techbook/index.php'>Techbook</a>
 						<a target="#" href='Ferrari/index.html'>Ferrari</a>
+						<a target="#" href='Techbook/index.php'>Techbook</a>
 						<a target="#" href='AJAX/index.html'>Javascript</a>
 						<a target="#" href='Arches/index.html'>Arches</a>
 					</div>
 
-					<p>All sites linked to this page are custom developed.</p><br>
+					<p>All sites above were custom developed without any libraries in order<br>
+					to learn responsive design using only pure HTML5, CSS3, Javascript, PHP, and MySQL.</p><br>
 					<p>Source code at <a style="color:rgba(150,150,150,1)" target="#" href="http://www.github.com/bmp713">Github.com</a></p>
 				</div>
 
@@ -64,27 +62,26 @@
 
 			<div id="content_2">
 
-				<div class="background">
+				<div class="background" id="background">
 					<p>
 						<span style="font-size:32px">
 						BACKGROUND<br><br></span>
 
 						"Scientists study the world as it is. Engineers create the world that has never been."<br>
-						Theodore von Karman<br><br>
+						Theodore von Karman<br><br><br>
 
-						I see software as the most powerful tool we have ever created to communicate ideas. 
-						No matter how amazing an idea can be if you can't communicate effectively it becomes useless. 
-						In addition to technical skills, I believe that developing a strong artistic intuition is important for 
-						innovation, and is reflected in the quality, performance, and reception of new technology.<br><br>
+						I see software as the most powerful tool we have ever created to communicate ideas.<br>
+						No matter how amazing an idea might be if you can't express it effectively it will be useless.<br>
+						I believe that developing a strong artistic intuition is important for innovation, and is<br>
+						reflected in the quality, performance, and reception of new technology.<br><br>
 
-						I am a web developer and software engineer seeking employment near Los Angeles or remotely. 
-						I have several years of industry experience and over the past year have learned full stack web 
-						development. I first focused on learning vanilla HTML, CSS, Javascript, PHP, and MySQL to 
-						understand how libraries such as Bootstrap, Angular, and jQuery work under the hood. I have learned 
-						about MVC using the MEAN and Laravel frameworks.<br><br>
+						I am a web developer and software engineer seeking employment near Los Angeles or remotely<br>
+						from anywhere. I have several years of industry experience and am now focusing on web development<br>
+						with HTML, CSS, Javascript, PHP, and MySQL. I have also learned how to implement<br>
+					 	MVC using Laravel and MEAN. <br><br>
 
-						I am also experienced with technical writing, presentation preparation, tutoring software concepts, 
-						leadership, graphic design, photography, video, audio, and image editing.<br><br>
+						I am also experienced with computer hardware, logic design, technical writing, presentation<br>
+						design, graphic design, tutoring software, team leadership, photography, video, and audio.<br><br>
 
 						Brandon Michael Piper<br><br>
 						Web Developer/Software Engineer<br>
@@ -163,29 +160,26 @@
 
 		</div> <!-- End content -->
 
-	</div>	<!-- End wrapper -->
-
-	<div id="copyright">
-
-		<span style="color:lightgray;font:18px sans-serif;">Portfolio Menu</span>
-
-		<span id="copyright_2">
+		<div onclick="closePortfolio()" id="copyright" style="cursor:pointer;">
+			<span style="color:lightgray;font:20px sans-serif;">Portfolio</span>
+			<span id="copyright_2">
 			&copy;2018 Brandon M Piper
-		</span><br><br>
-	    
-	    <div class="navbar" style="width:50%">
-		    <a class="navbar_copyright" target="#" href="Techbook/index.php">Techbook</a>
-			<a target="#" href="Ferrari/index.html">Ferrari</a>
-			<a target="#" href="AJAX/index.html">AJAX</a>
-			<a target="#" href="Arches/index.html">Arches</a>
+			</span><br><br><br>
+	    	<a id="copyright_1" download href="Resume.doc" style="float:right">
+			Resume (.doc)
+			</a>
+	    	<div id="copyright_navbar">
+				<a class="navbar_copyright" target="#" href="Ferrari/index.html">Ferrari</a>
+		    	<a class="navbar_copyright" target="#" href="Techbook/index.php">Techbook</a>
+				<a class="navbar_copyright" target="#" href="AJAX/index.html">AJAX</a>
+				<a class="navbar_copyright" target="#" href="Arches/index.html">Arches</a>
+			</div>
+
+
 		</div>
 
-		<a id="copyright_1" download href="Resume.doc" style="float:right">
-			Resume (.doc)
-		</a>
-
-	</div>
-
+	</div>	<!-- End wrapper -->
+	
 </body>
 </html>
 
