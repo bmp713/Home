@@ -1,4 +1,14 @@
 
+//window.addEventListener("scroll", parallax);
+function parallax(){
+    if( window.pageYOffset >= 1000 ){
+        document.getElementById("parallax_2").style.width = '70%';
+    }
+    else{
+        document.getElementById("parallax_2").style.width = '100%';        
+    }
+}
+
 window.addEventListener("scroll", copyrightMenu);
 function copyrightMenu(){
     var copyright = document.getElementById("copyright");
