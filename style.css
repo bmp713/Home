@@ -6,6 +6,7 @@ a{ cursor: pointer; text-decoration: none; }
    Width spans entire line by default. No height required because content dictates. 
    All divs parents must be at least positioned relative to set child absolute. 
    Setting a div to display none and back re-triggers animation on scroll. */
+
 #wrapper{
 	position: relative;
 	margin: auto;
@@ -19,7 +20,6 @@ a{ cursor: pointer; text-decoration: none; }
 	background: rgba(10, 10, 10, 1);
 }
 #video_container video{
-	//display: none;
 	position: relative;
 	z-index: -99;
 }
@@ -39,18 +39,18 @@ a{ cursor: pointer; text-decoration: none; }
 	color: lightgray;
 
 
-	background: url("assets/images/skyscrapers.jpg") no-repeat fixed; 
+	background: url("assets/images/2914205-laptop-keyboards-hewlett-packard___mixed-wallpapers.jpg") no-repeat fixed; 
 	background-size: 100%;
 
 	box-shadow: 15px 15px 50px black;
-	filter: brightness(100%);
+	filter: brightness(80%);
 	transition: color 1s, box-shadow 1s, filter 1s;
 	animation: fadein 2s;
 }
 #header:hover{
 	transition: color 1s, box-shadow 1s, filter 1s;
 	box-shadow: 15px 15px 50px black;
-	filter: brightness(50%);
+	filter: brightness(100%);
 	color: white;
 	z-index: 99;
 }
@@ -134,12 +134,15 @@ a{ cursor: pointer; text-decoration: none; }
 		background: rgba( 1, 1, 20, 0.7);
 		box-shadow: none;
 		font: 16px sans-serif;
-		transition: background 1s, box-shadow 1s, padding 1s, border 2s;
+		//transition: background 1s, box-shadow 1s, width 1s; 
+		transition: background 1s, box-shadow 1s; 
 	}
 	.background:hover{
-		transition: background 1s, box-shadow 1s, padding 1s, border 2s; 
+		//transition: background 1s, box-shadow 1s, width 1s; 
+		transition: background 1s, box-shadow 1s; 
 		background: rgba(10, 10, 20, 0.9);
 		box-shadow: 15px 15px 20px black;
+		//width: 100%;
 	}
 	
 
@@ -239,6 +242,10 @@ a{ cursor: pointer; text-decoration: none; }
 			background: url("assets/images/canyon_2 (2).jpeg") no-repeat fixed; 
 			background-size: cover;
 		}
+		#paragraph_1{
+			width: 50%;
+			text-align: left;"
+		}
 
 
 	#content_3{
@@ -281,7 +288,6 @@ a{ cursor: pointer; text-decoration: none; }
 		color: rgba(200, 200, 200, 1);
 		text-align: center;
 		font: 16px sans-serif, times;
-		//filter: saturation(50%);
 		background: url("assets/images/20150710_Aerial_LA_Fallon_0485.jpg") no-repeat fixed; 
 		background-size: 100%;
 	}
@@ -301,8 +307,12 @@ a{ cursor: pointer; text-decoration: none; }
 		}
 		#content_4 img:hover{
 			transition: width 1s;
-			width: 200px;
+			width: 150px;
 		}
+
+
+
+
 
 
 
@@ -484,19 +494,16 @@ a{ cursor: pointer; text-decoration: none; }
 		margin: auto;
 		width: 100%;
 		cursor: pointer ;
-
-		padding: 50px 10px;
-
-		//padding: 75px 50px;
+		padding: 75px 50px;
 		background: rgba( 1, 1, 20, 0.7);
 		box-shadow: none;
 		font: 16px sans-serif;
-		transition: background 1s, box-shadow 1s, padding 1s;
+		transition: background 1s, box-shadow 1s; 
 	}
 	.background:hover{
-		transition: background 1s, box-shadow 1s, padding 1s; 
+		transition: background 1s, box-shadow 1s; 
 		background: rgba(10, 10, 20, 0.9);
-		box-shadow: 15px 15px 30px black;
+		box-shadow: 15px 15px 20px black;
 	}
 
 	#content_1{
@@ -556,16 +563,17 @@ a{ cursor: pointer; text-decoration: none; }
 				font: 24px sans-serif;
 			}
 
+
 	#content_2{
 		padding: 100px 25px 100px 30px;
 		background: url("assets/images/canyon_2 (2).jpeg") no-repeat fixed; 
 		background-size: cover;
 		color: white;
 	}
-	#content_2 p{
-		width: 80%;
-		text-align: left;
-	}
+		#content_2 p{
+			width: 80%;
+			text-align: left;
+		}
 
 	#content_3{
 		padding: 100px 25px 100px 30px;
@@ -573,10 +581,10 @@ a{ cursor: pointer; text-decoration: none; }
 	  	background-size: cover;
 	  	color: white;
 	}
-	#content_3 p{
-		width: 80%;
-		text-align: left;
-	}
+		#content_3 p{
+			width: 80%;
+			text-align: left;
+		}
 
 	#content_4{
 		color: white;
