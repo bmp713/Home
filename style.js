@@ -85,9 +85,11 @@ function smoothScroll( elementId ){
 
 var copyrightOpen = false;
 function openPortfolio(){
-    console.log("openPortfolio()");
-    document.getElementById("copyright").style.height = '140px';
-    copyrightOpen = true;
+    if ( window.matchMedia("(min-width: 768px)" ).matches ){
+        console.log("openPortfolio()");
+        document.getElementById("copyright").style.height = '140px';
+        copyrightOpen = true;
+    }
 }
 function closePortfolio(){
     console.log("openPortfolio()");
