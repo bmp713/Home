@@ -1,14 +1,12 @@
-
-//window.addEventListener("scroll", parallax);
+window.addEventListener("scroll", parallax);
 function parallax(){
-    if( window.pageYOffset >= 1000 ){
-        document.getElementById("parallax_2").style.width = '70%';
-    }
-    else{
-        document.getElementById("parallax_2").style.width = '100%';        
+    if ( window.matchMedia("(min-width: 768px)" ).matches ){
+        if( window.pageYOffset < 1600 ){
+            document.getElementById("portfolio").style.top = window.pageYOffset/2 + 'px';
+            document.getElementById("box_1").style.top = window.pageYOffset * (3/2) + 'px';
+        }
     }
 }
-
 window.addEventListener("scroll", copyrightMenu);
 function copyrightMenu(){
     var copyright = document.getElementById("copyright");
@@ -19,7 +17,6 @@ function copyrightMenu(){
         copyright.style.height = '40px';        
     }
 }
-
 window.addEventListener("load", fixNavbar);
 window.addEventListener("scroll", fixNavbar);
 function fixNavbar(){
@@ -48,10 +45,10 @@ function fixNavbar(){
         //document.getElementById('copyright_2').appendChild( document.createElement('br') );
     }
 }
-// Elastic mmooth scrolling between content sections
+// Elastic smooth scrolling between content sections
 function smoothScroll( elementId ){
     var speed = 1;
-    var offset = 25; 
+    var offset = 20; 
     var current = window.pageYOffset;
     var destination = document.getElementById( elementId ).offsetTop;
 
@@ -82,7 +79,6 @@ function smoothScroll( elementId ){
         }
     }, speed );
 }
-
 var copyrightOpen = false;
 function openPortfolio(){
     if ( window.matchMedia("(min-width: 768px)" ).matches ){

@@ -27,7 +27,7 @@ a{ cursor: pointer; text-decoration: none; }
 	margin: auto;
 	width: 100%;
 	float: left;
-	height: 125	px;
+	height: 150px;
 	z-index: 1;
 	padding: 50px 25px 0px 25px;
 
@@ -39,14 +39,12 @@ a{ cursor: pointer; text-decoration: none; }
 	background: url("assets/images/keyboards-hewlett-packard.jpg") no-repeat fixed; 
 	background-size: 100%;
 	box-shadow: 15px 15px 50px black;
-	filter: brightness(80%);
-	transition: color 1s, box-shadow 1s, filter 1s;
+	transition: color 1s, box-shadow 1s;
 	animation: fadein 2s;
 }
 #header:hover{
-	transition: color 1s, box-shadow 1s, filter 1s;
+	transition: color 1s, box-shadow 1s;
 	box-shadow: 15px 15px 50px black;
-	filter: brightness(100%);
 	color: white;
 	z-index: 99;
 }
@@ -128,42 +126,42 @@ a{ cursor: pointer; text-decoration: none; }
 		cursor: pointer ;
 		padding: 25px 50px;
 		background: rgba(10, 10, 20, 0.5);
-		//background: rgba(10, 10, 40, 0.8);
 		box-shadow: 15px 15px 20px black;
-		font: 16px sans-serif;
 		transition: background 1s, box-shadow 1s; 
 	}
 	.background:hover{
 		transition: background 1s, box-shadow 1s; 
 		background: rgba(10, 10, 40, 0.8);
-		//background: rgba(10, 10, 20, 0.5);
 		box-shadow: none;
 	}
-		.paragraph{
+		.paragraph{s
+			position: relative;
 			padding: 50px 50px;
 			color: lightgray;
 			box-shadow: none;
-			background: rgba(50, 50, 50, 0.7);
+			font: 12px sans-serif;
+			background: rgba(50, 50, 50, 0.6);
 			transition: background 1s, box-shadow 1s, color 2s;
 		}
 		.paragraph:hover{
 			color: white;
-			background: rgba(10, 10, 10, 0.9);
+			background: rgba(10, 10, 10, 0.8);
 			box-shadow: 15px 15px 20px black;
 			transition: background 1s, box-shadow 1s, color 2s;
 		}
 
-
 	#content_1{
 		position: relative;
-		margin: 300px auto 300px auto;
-		padding: 0px 50px 300px 50px;
+		margin: 150px auto 0px auto;
+		padding: 150px 50px 400px 50px;
 
 		display: block;
 		float: left; /* Parent of floated elements must be float/clear or specific height */
 		width: 100%;
 
 		color: lightgray;
+		background: url("assets/images/iphone-ipad-apple (2).jpg") no-repeat fixed;
+		background-size: cover;
 		text-align: center;
 		transition: color 1s;
 	}
@@ -228,7 +226,7 @@ a{ cursor: pointer; text-decoration: none; }
 		color: rgba(255, 255, 255, 0.7);
 		text-align: left;
 		font: 30px sans-serif, times;
-		background: url("assets/images/canyon (2).jpeg") no-repeat fixed; 
+		background: url("assets/images/apple_desktop.jpeg") no-repeat fixed; 
 		background-size: cover;
 	  	transition: background 1s, color 1s;
 	}
@@ -251,7 +249,7 @@ a{ cursor: pointer; text-decoration: none; }
 			margin: 0px auto 0px auto;
 			padding: 150px 0px 250px 0px;
 			
-			background: url("assets/images/canyon (2).jpeg") no-repeat fixed; 
+			background: url("assets/images/apple_desktop.jpeg") no-repeat fixed; 
 			background-size: cover;
 		}
 
@@ -267,7 +265,7 @@ a{ cursor: pointer; text-decoration: none; }
 		color: rgba(255, 255, 255, 0.7);
 		text-align: right;
 		font: 30px sans-serif, times;
-		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
+		background: url("assets/images/yosemite_ledge.jpg") no-repeat fixed; 
 	  	background-size: cover;	
 		transition: color 1s;
 	}
@@ -291,12 +289,12 @@ a{ cursor: pointer; text-decoration: none; }
 		width: 100%;
 
 		margin: 0px auto 0px auto;
-		padding: 100px 0px 500px 0px;
+		padding: 100px 0px 350px 0px;
 
 		color: rgba(200, 200, 200, 1);
 		text-align: center;
 		font: 16px sans-serif, times;
-		background: url("assets/images/yosemite_ledge.jpg") no-repeat fixed; 
+		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
 		background-size: cover;
 	}
 		#content_4 p{
@@ -353,7 +351,6 @@ a{ cursor: pointer; text-decoration: none; }
 		}
 
 
-
 	#copyright{
 		position: fixed;
 		clear: both;
@@ -395,10 +392,11 @@ a{ cursor: pointer; text-decoration: none; }
 			color: lightgray;
 			border: 1px solid darkgray;
 			padding: 10px 5% 10px 5%;
-			background: rgba( 1, 1, 35, 1);
+			background: rgba( 1, 1, 35, 0.7);
+			transition: background 1s, color 1s, border 1s;
 		}
 		.navbar_copyright:hover{
-			transition: background 1s, color 1s;
+			transition: background 1s, color 1s, border 1s;
 			background: rgba(10, 10, 50, 0);
 			border: 1px solid white;
 			color: white;
@@ -413,7 +411,7 @@ a{ cursor: pointer; text-decoration: none; }
 }
 @keyframes fadein{
 	from{ 	opacity: 0; }
-   	to  { 	opacity: 0.8; }
+   	to  { 	opacity: 1; }
 }
 
 
@@ -497,20 +495,21 @@ a{ cursor: pointer; text-decoration: none; }
 		//background: rgba(10, 10, 10, 0.6);
 		box-shadow: none;
 	}
-	.paragraph{
-		padding: 50px 50px;
-		box-shadow: none;
+		.paragraph{
+			padding: 50px 50px;
+			color: lightgray;
+			box-shadow: none;
+			font: 12px sans-serif;
+			background: rgba(50, 50, 50, 0.7);
+			transition: background 1s, box-shadow 1s, color 2s;
+		}
+		.paragraph:hover{
+			color: white;
+			background: rgba(10, 10, 10, 0.9);
+			box-shadow: 15px 15px 20px black;
+			transition: background 1s, box-shadow 1s, color 2s;
+		}
 
-		color: rgba(255,255,255,1);
-		background: rgba(50, 50, 50, 0.7);
-		transition: background 1s, box-shadow 1s, color 2s;
-	}
-	.paragraph:hover{
-		color: white;
-		background: rgba(10, 10, 10, 0.9);
-		box-shadow: 15px 15px 20px black;
-		transition: background 1s, box-shadow 1s, color 2s;
-	}
 
 
 	#content_1{
@@ -589,8 +588,8 @@ a{ cursor: pointer; text-decoration: none; }
 
 		color: rgba(255, 255, 255, 0.7);
 		text-align: left;
-		font: 30px sans-serif, times;
-		background: url("assets/images/canyon (2).jpeg") no-repeat fixed; 
+		font: 12px sans-serif, times;
+		background: url("assets/images/apple_desktop.jpeg") no-repeat fixed; 
 		background-size: cover;
 	  	transition: background 1s, color 1s;
 	}
@@ -618,8 +617,8 @@ a{ cursor: pointer; text-decoration: none; }
 
 		color: rgba(255, 255, 255, 0.7);
 		text-align: left;
-		font: 30px sans-serif, times;
-		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
+		font: 12px sans-serif, times;
+		background: url("assets/images/yosemite_ledge.jpg") no-repeat fixed; 
 	  	background-size: cover;	
 		transition: color 1s;
 	}
@@ -647,8 +646,8 @@ a{ cursor: pointer; text-decoration: none; }
 
 		color: rgba(200, 200, 200, 1);
 		text-align: left;
-		font: 16px sans-serif, times;
-		background: url("assets/images/yosemite_ledge.jpg") no-repeat fixed; 
+		font: 12px sans-serif, times;
+		background: url("assets/images/desert (3).jpg") no-repeat fixed; 
 		background-size: cover;
 	}
 		#content_4 p{
