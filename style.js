@@ -1,10 +1,14 @@
 
+var opac = 1;
 window.addEventListener("scroll", parallax_1);
 function parallax_1(){
     if ( window.matchMedia("(min-width: 768px)" ).matches ){
-            document.querySelector("#portfolio_header").style.left = window.pageYOffset + 'px';
+        opac += 0.05;
+        document.querySelector("#portfolio_p").style.left = -window.pageYOffset + 'px';
+        document.querySelector("#portfolio_p").style.opacity = opac;
+
+        document.querySelector("#portfolio_header").style.left = window.pageYOffset + 'px';
             document.querySelector("#portfolio_buttons").style.top = -window.pageYOffset* (3/2) + 'px';
-            document.querySelector("#portfolio_p").style.left = -window.pageYOffset + 'px';
     }
 }
 
@@ -142,6 +146,7 @@ function openSlideshow( elementSrc ){
         document.querySelector("#slideshow").style.height = "100%";
         document.querySelector("#slideNav").innerHTML = "Close";
         document.querySelector("#slideNav").style.background = "rgba(50,50,100,0.8)";
+
     }
 }
 function closeSlideshow(){

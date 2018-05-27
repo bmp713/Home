@@ -9,11 +9,22 @@ a{ cursor: pointer; text-decoration: none; }
 	from{ 	opacity: 0; }
    	to  { 	opacity: 1; }
 }
+#video_container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 90%;
+	background: rgba(10, 10, 10, 1);
+}
+#video_container video{
+	position: relative;
+	z-index: -99;
+}
 #wrapper{
 	overflow: hidden;
 	position: relative;
 	margin: auto;
-	width: 90%;
+	width: 100%;
 }
 #header{
 	position: absolute;
@@ -28,32 +39,37 @@ a{ cursor: pointer; text-decoration: none; }
 	text-align: left;
 	font: 36px sans-serif, times;
 	color: rgba(150, 150, 150, 1);
-	background: url("assets/images/apple_keys.jpg") no-repeat fixed;
-	box-shadow: none;
 	transition: color 1s, box-shadow 1s;
 	animation: fadein 2s;
 }
 #header:hover{
-	transition: color 1s, box-shadow 1s,;
+	transition: color 1s, box-shadow 1s;
 	color: white;
+	height: 150px;
 	z-index: 99;
 }
 	#header:hover #resume_header{
 		color: rgba(5, 5, 30, 1);
 		transition: color 1s;
 	}
-	#header:hover #header_2{
-		color: rgba(100, 100, 100, 0.7);
+	#header:hover #header_title{
+		color: lightgray;
 		transition: color 1s;
 	}
-	#header_1{
+	#header_name{
+		transition: color 1s;
+		color: darkgray;
 		font: 48px sans-serif;
 		animation: fadein 2s;
 	}
-	#header_2{
+	#header_name:hover{
+		transition: color 1s;
+		color: gray;
+	}
+	#header_title{
 		float: right;
 		padding-top: 5px;
-		color: rgba(200, 200, 200, 1);
+		color: white;
 		font: 20px sans-serif;
 		animation: fadein 2s;
 		transition: color 1s;
@@ -85,29 +101,36 @@ a{ cursor: pointer; text-decoration: none; }
 		height: 40px;
 		padding: 10px 0px 10px 0px;
 
-		color: rgba(200, 200, 200, 1);
 		text-align: center;
 		cursor: pointer;
 		display: block;
 		z-index: 99;
 
+		/*border-bottom: 1px solid lightgray;*/
 		font: 16px sans-serif;
-		background: rgba( 50, 50, 50, 0.8);
+		background: white;
+		color: darkgray;
+		/*background: rgba( 50, 50, 50, 0.8);*/
 		animation: fadein 2s;
-		transition: color 1s, background 0.5s, transform 2s;
+		transition: color 1s, background 0.5s;
 	}
 	.navbar a:hover{
 		/*transform: rotateX(360deg);*/
-		transition: color 1s, background 0.5s, transform 1s;
+		transition: color 1s, background 0.5s;
 		box-shadow: none;
+		background: white;
+		
 		background: rgba( 75, 75, 75, 1);
+		
 	   	color: white;
 	}
 	#slideNav{
 		background: rgba(10, 10, 20, 0.8);
 		border: 1px solid rgba(10, 10, 20, 0.8);
+		transition: border 1s, color 1s;
 	}
 	#slideNav:hover{
+		transition: border 1s, color 1s;
 		background: rgba( 50, 50, 50, 0.8);
 		border: 1px solid white;
 	}
@@ -117,7 +140,7 @@ a{ cursor: pointer; text-decoration: none; }
 		overflow: hidden;
 		position: fixed;
 		margin: auto;
-		width: 90%;
+		width: inherit;
 		height: 0;
 		top: 0;
 		z-index: 90;
@@ -161,23 +184,25 @@ a{ cursor: pointer; text-decoration: none; }
 
 	#content_1{
 		position: relative;
-		margin: 150px auto 0px auto;
+		margin: 100px auto 200px auto;
 		padding: 150px 50px 400px 50px;
 
 		display: block;
 		float: left; /* Parent of floated elements must be float/clear or specific height */
-		width: 100%;
+		width: 65%;
 		z-index: 1;
 
-		color: lightgray;
+		color: gray;
+		/*
 		background: url("assets/images/apple_desktop.jpeg") no-repeat fixed;
 		background-size: cover;
+		*/
 		text-align: center;
 		transition: color 1s;
 	}
 	#content_1:hover{
 	  	transition: color 1s;
-	  	color: white;
+	  	color: darkgray;
 	}
 
 
@@ -195,8 +220,8 @@ a{ cursor: pointer; text-decoration: none; }
 
 		#portfolio{
 			position: relative;
-			margin: auto;
-			padding: 50px 0px;
+			margin: 0px auto;
+			padding: 50px 0px 10px 0px;;
 			z-index: 0;
 			float: none;
 			left: none;
@@ -207,6 +232,7 @@ a{ cursor: pointer; text-decoration: none; }
 		#portfolio_header{
 			position: relative;
 			left: none; /* Allows element to float outside of div in Javascript */
+			color: darkgray;
 			font: 42px sans-serif;
 		}
 		#portfolio_buttons{
@@ -214,51 +240,58 @@ a{ cursor: pointer; text-decoration: none; }
 			margin: auto;
 			width: 100%;
 			left: none;
-			padding: 50px 50px;
+			padding: 50px 20px;
 		}
 		.portfolio_button{
 			position: relative;
-			margin: 10px auto;
+			margin: auto;
+			display: block;
 			float: left;
 			width: 20%;
 			left: none;
 			padding: 10px 20px;
 
 			color: white;
-			font: 16px sans-serif;
+			font: 14px sans-serif;
 			border: 1px solid white;
-			background: rgba(1, 1, 50, 0.7);
-			transition: background 1s;
+			background: rgba(1, 1, 70, 1);
+			transition: background 1s, color 1s, border 1s;
 		}
 		.portfolio_button:hover{
-			transition: background 1s;
+			color: darkgray;
+			transition: background 1s, color 1s, border 1s;
 			background: rgba(1, 1, 50, 0);
+			border: 1px solid gray;
 		}
 		#portfolio_p{
 			position: relative;
-			padding: 50px 0;
+			padding: 50px 0 50px 0;
 			clear: both;
 			left: none;
-			font: 16px sans-serif;
+			color: darkgray;
+			font: 14px sans-serif;
 		}
 		#portfolio_p img{
-			width: 7%;
+			padding: 50px 0 0 0; 
+			width: 50px;
 		}
 		
 		#background_1{
 			position: relative;
 			margin: auto;
-			width: 80%;
+			width: 100%;
 			padding: 25px 50px 0px 50px;
+			/*
 			background: rgba(10, 10, 30, 0.7);
-			box-shadow: 5px 5px 10px black;
-			transition: background 1s, box-shadow 1s, transform 2s;
+			box-shadow: 5px 5px 10px black;*/
+			transition: background 1s, box-shadow 1s;
 		}
+		/*
 		#background_1:hover{
 			transition: background 1s, box-shadow 1s, transform 1s;
 			background: rgba(10, 10, 20, 0.5);
 			box-shadow: 10px 10px 10px black;
-		}
+		}*/
 
 		
 	#contents{
@@ -266,7 +299,6 @@ a{ cursor: pointer; text-decoration: none; }
     	margin: auto;
 		width: 100%;
 		z-index: 0;
-    	transition: width 1s;
 	}
 
 	.background{
@@ -277,7 +309,7 @@ a{ cursor: pointer; text-decoration: none; }
 		z-index: 0;
 
 		box-shadow: none;
-		font: 12px sans-serif;
+		font: 14px sans-serif;
 		background: rgba(50, 50, 50, 0.7);
 		transition: background 1s, box-shadow 1s, color 2s, transform 2s;
 	}
@@ -290,10 +322,9 @@ a{ cursor: pointer; text-decoration: none; }
 
     	#content_left{
         	position: relative;
-        	margin: 0px 0px;
+        	margin: -400px 0px;
         	float: left;
 			width: 65%;
-			height: 5000px;
 			z-index: 100;
 
 			font: 24px sans-serif;
@@ -320,9 +351,9 @@ a{ cursor: pointer; text-decoration: none; }
 				z-index: 10;
         	}
 	        	#content_left_1_p{
-					width: 100%;
-        	    	color: lightgray;
-            		font: 16px sans-serif;
+					width: 80%;
+					color: lightgray;
+            		font: 14px sans-serif;
         		}
 
 	        #content_left_2{
@@ -358,16 +389,37 @@ a{ cursor: pointer; text-decoration: none; }
 				transition: background 1s;
 				background: rgba(20, 10, 10, 0.5);
 			}
+
+			
+	        #content_left_4{
+    	        position: relative;
+        	    margin: 0px auto 0px auto;
+            	padding: 250px 100px 1800px 100px;
+	            width: 100%;
+    	        z-index: 10;
+        	    color: white;
+            	cursor: pointer;
+	            background: rgba(20, 10, 10, 0.7);
+    	        transition: background 1s;
+        	    animation: fadein 2s;
+        	}
+        	#content_left_4:hover{
+				transition: background 1s;
+				background: rgba(20, 10, 10, 0.5);
+			}
+
+
 			#social_media{
 				position: relative;
 				margin: auto;
 				width: inherit;
 				padding: 50px 50px;
+				text-align: center;
 			}
 			.social_button{
 				position: relative;
 				margin: auto;
-				padding: 0px 50px;
+				padding: 0px 40px;
 			}
 			.social_button img{
 				width: 10%;
@@ -394,7 +446,7 @@ a{ cursor: pointer; text-decoration: none; }
 	    #content_right{
     	    position: relative;
         	float: right;
-	        margin: -1600px 0px 0px 0px;
+	        margin: -2275px 0px 0px 0px;
 			width: 35%;
 			z-index: 0;
 			text-align: center;
@@ -439,7 +491,7 @@ a{ cursor: pointer; text-decoration: none; }
 			#content_6{
             	position: relative;
             	margin: auto;
-	            padding: 50px 50px 100px 50px;
+	            padding: 50px 50px 50px 50px;
     	        width: 100%;
 
 	            color: white;
@@ -494,7 +546,7 @@ a{ cursor: pointer; text-decoration: none; }
 		position: fixed;
 		clear: both;
 		bottom: 0;
-		width: 90%;
+		width: inherit;
 		height: 40px;
 		padding: 10px 10px 15px 10px;
 		z-index: 100;
@@ -810,7 +862,7 @@ a{ cursor: pointer; text-decoration: none; }
 			}
 			#social_media{
 				position: relative;
-				margin: auto;
+				margin: -500px auto 0px auto;
 				width: 100%;
 				padding: 75px 0px;
 				text-align: center;

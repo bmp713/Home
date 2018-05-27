@@ -9,10 +9,18 @@
 </head>
 
 <body>
+	<!--
+	<div id="video_container">
+		<script>document.getElementById("Video").playbackRate = 0.2</script>
+		<video style="filter:brightness(70%)" id="Video" src="assets/video/ripples.mp4" autoplay loop muted>
+		</video>
+	</div>
+	-->
 	<div id="wrapper">
 
+
 		<div id="header">
-			<h1 id="header_1">Brandon M Piper<span id="header_2">Full Stack Web Developer | Software Engineer</span></h1>
+			<h1 id="header_name">Brandon M Piper<span id="header_title">Full Stack Web Developer | Software Engineer</span></h1>
 			<a id="resume_header" download href="Resume.doc">
 			Resume (.doc)
 			</a><br>
@@ -25,15 +33,6 @@
 			<a href="#content_left_3">Education</a>
 			<a id="slideNav" onclick="openSlideshow()">Slideshow</a>
 		</div>
-	<!--
-		<div class="navbar" id="navbar">
-		    <a onclick="smoothScroll('navbar')">Home</a>
-        	<a onclick="smoothScroll('content_left')">Background</a>
-        	<a onclick="smoothScroll('content_left_2')">Experience</a>
-			<a onclick="smoothScroll('content_left_3')">Education</a>
-			<a id="slideNav" onclick="openSlideshow()">Slideshow</a>
-		</div>
-	-->
 
 		<a onclick="closeSlideshow()">
 		<div id="slideshow">
@@ -42,7 +41,7 @@
 			</a>
 		</div>
 		</a>
-
+		
 		<div id="content">
 
 			<div id="content_1">
@@ -61,8 +60,8 @@
 			
 						<div id="portfolio_buttons">
 							<a class="portfolio_button" target="#" href='Ferrari/index.html'>Ferrari</a>
-							<a class="portfolio_button" target="#" href='Techbook/index.php'>Techbook</a>
 							<a class="portfolio_button" target="#" href='Thinkpad/index.html'>Lenovo</a>
+							<a class="portfolio_button" target="#" href='Techbook/index.php'>Techbook</a>
 							<a class="portfolio_button" target="#" href='AJAX/index.html'>Javascript</a>
 							<a class="portfolio_button" target="#" href='Commerce'>ECommerce</a>
 						</div><br>
@@ -70,9 +69,10 @@
 						<div id="portfolio_p">
 							All sites were developed from scratch without any libraries in order to learn<br>
 							responsive design using pure HTML, CSS, Javascript, PHP, and MySQL.<br><br>
-							Click on slideshow for screenshots, or the buttons for full sites.<br><br>
+							Click on slideshow for screenshots, or the buttons for full sites.<br>
+							Scroll page to see multiple parallax effects.<br><br>
 						
-							Source code available on github.com/bmp713<br>
+							Source code on github.com/bmp713<br>
 							<a id="github" target="#" href="http://github.com/bmp713">
 								<img src="assets/images/Icon_github_gray.png"></a>
 							</a>
@@ -88,36 +88,37 @@
 				<div id="content_left">
 				
 					<div id="content_left_1">
-						<p class="background">
-							<span style="font-size:32px;color:rgba(100,100,100,1);">
-							BACKGROUND
-							</span><br><br>
-							PROFILE<br><br>
-							"Scientists study the world as it is. Engineers create the world that has never been."<br>
-							Theodore von Karman<br><br>
+						<div class="background">
+							<div id="content_left_1_p">
+								<span style="font-size:32px;color:rgba(100,100,100,1);">
+								BACKGROUND
+								</span><br><br>
+								PROFILE<br><br>
+								"Scientists study the world as it is. Engineers create the world that has never been."<br>
+								Theodore von Karman<br><br>
+								
+								I see software as the most powerful tool we have ever created to communicate ideas. No matter 
+								how amazing an idea might be, if you can't present it effectively nobody will care. I believe 
+								that the key to innovation is developing a strong artistic intuition by exposing oneself to a 
+								wide variety of creative disciplines, both technical and non-technical.<br><br>
+								
+								I am a full stack web developer and software engineer seeking employment near Los Angeles or 
+								remotely from anywhere. I have several years of software industry experience including one 
+								year working remotely. I am currently focusing on web development with HTML, CSS, Javascript, PHP, 
+								and SQL/MySQL. I have some experience using the model view controller paradigm with Laravel 
+								and the MEAN stack, but I have first focused on trying to master vanilla PHP/MySQL and 
+								Javascript to be able to write customized frameworks.<br><br>
 	
-							I see software as the most powerful tool we have ever created to communicate ideas. No matter 
-							how amazing an idea might be, if you can't present it effectively nobody will care. I believe 
-							that the key to innovation is developing a strong artistic intuition by exposing oneself to a 
-							wide array of creative disciplines, both technical and non-technical.<br><br>
-	
-							I am a full stack web developer and software engineer seeking employment near Los Angeles or 
-							remotely from anywhere. I have several years of software industry experience including one 
-							year working remotely. I am currently focusing on web development with HTML, CSS, Javascript, PHP, 
-							and SQL/MySQL. I have some experience using the model view controller paradigm with Laravel 
-							and the MEAN stack, but I have first focused on trying to master vanilla PHP/MySQL and 
-							Javascript to be able to write customized frameworks.<br><br>
-	
-							I am also experienced with technical writing, presentation design, graphic design, tutoring 
-							software,  team leadership, photography, video/audio/image editing. I also have a passion 
-							for communication, and teaching complex ideas in clear and concise language.
-							<br><br>
-							Brandon Michael Piper<br>
-							Web Developer/Software Engineer<br>
-							bmp713@yahoo.com<br>
-							Los Angeles, CA<br>
-							(831) 419-0137<br><br>
-						</p>
+								I am also experienced with technical writing, presentation design, graphic design, tutoring 
+								software,  team leadership, photography, video/audio/image editing. I also have a passion 
+								for communication, and teaching complex ideas in clear and concise language.
+								<br><br>
+								Brandon Michael Piper<br>
+								bmp713@yahoo.com<br>
+								Los Angeles, CA<br>
+								(831) 419-0137<br><br>
+							</div>
+						</div>
 					</div>
 					
 					<div id="content_left_2">
@@ -175,8 +176,15 @@
 							OTHER INTERESTS<br><br>
 							▪ Photography, music, guitar, writing, philosophy, basketball, hiking, running, skiing<br><br>
 	
+
+
+						</p><br>	
+					</div>
+
+					<div id="content_left_4">
+						<div class="background">
 							<div id="social_media">
-								<span style="font-size:24px;color:rgba(100,100,100,1);">
+								<span style="font-size:32px;color:rgba(100,100,100,1);">
 								SOCIAL MEDIA<br><br><br>
 								</span><br><br>
 								<a class="social_button" target="#" href="http://github.com/bmp713">
@@ -192,32 +200,24 @@
 							<div id="social_resume" download href="Resume.doc">
 								Resume.doc
 							</div>
-
-						</p><br>	
+						</div>
 					</div>
+
 				
 				</div> <!-- End content_left -->
 	
 				<div id="content_right">
 					<div id="content_right_1">
-							<div id="content_5">
-								<h2>Click to enlarge images</h2>
-								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (307).png')">
-									<img src="assets/images/Portfolio/Screenshot (307).png"></a>
-								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (311).png')">
-									<img src="assets/images/Portfolio/Screenshot (311).png"></a>
-								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (310).png')">
-									<img src="assets/images/Portfolio/Screenshot (310).png"></a>
-							</div>
-							<div id="content_6">
-								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (382).png')">
-									<img src="assets/images/Portfolio/Screenshot (382).png"></a>
-								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (383).png')">
-									<img src="assets/images/Portfolio/Screenshot (383).png"></a>
-								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (389).png')">
-								<img src="assets/images/Portfolio/Screenshot (389).png"></a>
-							</div>
-							<div id="content_7">
+						<div id="content_5">
+							<h2>Click to enlarge images</h2>
+							<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (307).png')">
+								<img src="assets/images/Portfolio/Screenshot (307).png"></a>
+							<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (311).png')">
+								<img src="assets/images/Portfolio/Screenshot (311).png"></a>
+							<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (310).png')">
+								<img src="assets/images/Portfolio/Screenshot (310).png"></a>
+						</div>
+						<div id="content_6">
 								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (202).png')">
 									<img src="assets/images/Portfolio/Screenshot (202).png"></a>
 								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (203).png')">
@@ -225,6 +225,14 @@
 									<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (204).png')">
 								<img src="assets/images/Portfolio/Screenshot (204).png"></a>
 							</div>
+						<div id="content_7">
+							<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (382).png')">
+								<img src="assets/images/Portfolio/Screenshot (382).png"></a>
+							<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (383).png')">
+								<img src="assets/images/Portfolio/Screenshot (383).png"></a>
+							<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (389).png')">
+							<img src="assets/images/Portfolio/Screenshot (389).png"></a>
+						</div>
 
 					</div>
 
@@ -246,8 +254,8 @@
 
 	    	<div id="copyright_navbar">
 				<a class="navbar_copyright" target="#" href="Ferrari/index.html">Ferrari</a>
-		    	<a class="navbar_copyright" target="#" href="Techbook/index.php">Techbook</a>
 				<a class="navbar_copyright" target="#" href="Thinkpad/index.html">Lenovo</a>
+				<a class="navbar_copyright" target="#" href="Techbook/index.php">Techbook</a>
 				<a class="navbar_copyright" target="#" href="AJAX/index.html">AJAX</a>
 				<a class="navbar_copyright" target="#" href='Commerce'>ECommerce</a>
 			</div>
