@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="style.css">
-<script src="style.js"></script> 
+<script src="style.js"></script>
 </head>
 
 <body>
@@ -19,183 +19,244 @@
 		</div>
 
 		<div class="navbar" id="navbar">
-		    <a onclick="smoothScroll('navbar')">Home</a>
-        	<a onclick="smoothScroll('content_2')">Background</a>
-        	<a onclick="smoothScroll('content_3')">Experience</a>
-        	<a onclick="smoothScroll('content_4')">Education</a>
+		    <a href="#header">Home</a>
+        	<a href="#content_left_1">Background</a>
+        	<a href="#content_left_2">Experience</a>
+			<a href="#content_left_3">Education</a>
+			<a id="slideNav" onclick="openSlideshow()">Slideshow</a>
 		</div>
+	<!--
+		<div class="navbar" id="navbar">
+		    <a onclick="smoothScroll('navbar')">Home</a>
+        	<a onclick="smoothScroll('content_left')">Background</a>
+        	<a onclick="smoothScroll('content_left_2')">Experience</a>
+			<a onclick="smoothScroll('content_left_3')">Education</a>
+			<a id="slideNav" onclick="openSlideshow()">Slideshow</a>
+		</div>
+	-->
 
-    	<div id="video_container">
-       		<!--<video id="Video" src="assets/video/Water.mp4" 
-       			   style="filter:brightness(50%)" autoplay loop muted>
-       			   <script>document.getElementById("Video").playbackRate = 0.30;</script>
-       		</video>-->
-   		</div>
+		<a onclick="closeSlideshow()">
+		<div id="slideshow">
+			<a onclick="slideImage()">
+				<img id="image">
+			</a>
+		</div>
+		</a>
 
 		<div id="content">
 
 			<div id="content_1">
-				<div id="background_1" class="background">
-					<!-- Name only displayed in mobile view -->
+				<div id="background_1">
+
 					<h2 id="name">
 						Brandon M Piper
 					</h2>
+					<h3 id="title">
+						Full Stack Software Engineer
+					</h3>
+					<div id="portfolio">
+						<h2 id="portfolio_header">
+							Portfolio | Web Development
+						</h2>
+			
+						<div id="portfolio_buttons">
+							<a class="portfolio_button" target="#" href='Ferrari/index.html'>Ferrari</a>
+							<a class="portfolio_button" target="#" href='Techbook/index.php'>Techbook</a>
+							<a class="portfolio_button" target="#" href='Thinkpad/index.html'>Lenovo</a>
+							<a class="portfolio_button" target="#" href='AJAX/index.html'>Javascript</a>
+							<a class="portfolio_button" target="#" href='Commerce'>ECommerce</a>
+						</div><br>
 
-					<h3 id="title">Full Stack Software Engineer</h3>
-					<p id="portfolio" style="padding-top:50px;padding-bottom:50px;">
-						Portfolio | Web Development
-					</p>
+						<div id="portfolio_p">
+							All sites were developed from scratch without any libraries in order to learn<br>
+							responsive design using pure HTML, CSS, Javascript, PHP, and MySQL.<br><br>
+							Click on slideshow for screenshots, or the buttons for full sites.<br><br>
+						
+							Source code available on github.com/bmp713<br>
+							<a id="github" target="#" href="http://github.com/bmp713">
+								<img src="assets/images/Icon_github_gray.png"></a>
+							</a>
+						</div>
 
-					<br><div id="box_1">
-						<a target="#" href='Ferrari/index.html'>Ferrari</a>
-						<a target="#" href='Techbook/index.php'>Techbook</a>
-						<a target="#" href='AJAX/index.html'>Javascript</a>
-						<a target="#" href='wordpress'>Wordpress</a>
-						<a target="#" href='Arches/index.html'>Arches</a>
 					</div>
 
-					<p>
-						Most sites above were custom developed without any libraries in order<br>
-						to learn responsive design using only pure HTML5, CSS3, Javascript, PHP, and MySQL. 
-					</p><br>
-					<p>
-						Source code at 
-						<a style="color:rgba(150,150,150,1)" target="#" href="http://www.github.com/bmp713">
-							Github.com
-						</a>
-					</p><br>
 				</div>
 			</div>
 
-			<div id="content_2">
-				<div class="background">
-					<p id="paragraph_1" class="paragraph">
-						<span style="font-size:28px">
-						BACKGROUND
-						</span><br><br>
-						"Scientists study the world as it is. Engineers create the world that has never been."
-						Theodore von Karman<br><br>
-						
-						I see software as the most powerful tool we have ever created to communicate ideas.
-						No matter how amazing an idea might be, if you can't present it effectively it will be
-						useless. I believe that the key to innovation is developing a strong artistic intuition
-						by exposing oneself to a wide array of creative disciplines, an approach which is often
-						reflected in the quality and reception of new technology.<br><br>
+			<div id="contents">
 
-						I am a full stack web developer and software engineer seeking employment near Los Angeles or
-						remotely from anywhere. I have several years of software industry experience including
-						one year working remotely. I am now focusing on web development with HTML, CSS, Javascript,
-						PHP, and MySQL. I also have experience with the model view controller paradigm using Laravel
-						and MEAN.<br><br>
-
-						I am also experienced with technical writing, presentation design, graphic design,
-						tutoring software,  leadership, photography, video, audio, and image editing.<br><br>
-
-						Brandon Michael Piper<br><br>
-						Web Developer/Software Engineer<br>
-						bmp713@yahoo.com<br>
-						Los Angeles, CA<br>
-						(831) 419-0137<br><br>
-					</p>
-				</div>
-			</div>
-
-			<div id="content_3">
-				<div class="background">
-					<p class="paragraph">
-						<span style="font-size:32px">
-						SOFTWARE EXPERIENCE
-						</span><br><br>
-						FULL STACK WEB DEVELOPER - LOS ANGELES, CA<br>
-						Full Stack Developer (2016-2018)<br>
-						▪ Learned full stack web development<br>
-						▪ Learned HTML, CSS, Javascript, PHP, MySQL, Laravel, Angular, Node<br>
-						▪ Learned all layers of web stack using LAMP/MEAN/Laravel/Wordpress on remote and virtual hosts<br>
-						▪ Learned theory behind responsive design and layout<br><br>
-
-						VERISIGN - MOUNTAIN VIEW, CA<br>
-						Quality Assurance Engineer (2007-2009)<br>
-						▪ Developed automation testing for SSL certificate customer service website<br>
-						▪ Developed large number of testing cases using custom methodology<br>
-						▪ Maintained suites of WinRunner scripts<br><br>
-
-						LYNX SOFTWARE - SAN JOSE, CA<br>
-						Quality Assurance Engineer (2006-2007)<br>
-						▪ Reverse engineered embedded operating system in C to uncover potential vulnerabilities<br>
-						▪ Developed and maintained Bash automation scripts<br>
-						▪ Provided training for new employees<br>
-						▪ Wrote employee training manual<br><br>
-
-						UNIVERSITY OF CALIFORNIA, SANTA CRUZ<br>
-						Academic Tutor (2004-2005)<br>
-						▪ Tutored engineering students in data structures and algorithms with C and Java<br>
-						▪ Led group tutoring sessions for Multicultural Engineering Program<br>
-						▪ Tutored students of varying learning styles and disabilities<br>
+				<div id="content_left">
+				
+					<div id="content_left_1">
+						<p class="background">
+							<span style="font-size:32px;color:rgba(100,100,100,1);">
+							BACKGROUND
+							</span><br><br>
+							PROFILE<br><br>
+							"Scientists study the world as it is. Engineers create the world that has never been."<br>
+							Theodore von Karman<br><br>
+	
+							I see software as the most powerful tool we have ever created to communicate ideas. No matter 
+							how amazing an idea might be, if you can't present it effectively nobody will care. I believe 
+							that the key to innovation is developing a strong artistic intuition by exposing oneself to a 
+							wide array of creative disciplines, both technical and non-technical.<br><br>
+	
+							I am a full stack web developer and software engineer seeking employment near Los Angeles or 
+							remotely from anywhere. I have several years of software industry experience including one 
+							year working remotely. I am currently focusing on web development with HTML, CSS, Javascript, PHP, 
+							and SQL/MySQL. I have some experience using the model view controller paradigm with Laravel 
+							and the MEAN stack, but I have first focused on trying to master vanilla PHP/MySQL and 
+							Javascript to be able to write customized frameworks.<br><br>
+	
+							I am also experienced with technical writing, presentation design, graphic design, tutoring 
+							software,  team leadership, photography, video/audio/image editing. I also have a passion 
+							for communication, and teaching complex ideas in clear and concise language.
+							<br><br>
+							Brandon Michael Piper<br>
+							Web Developer/Software Engineer<br>
+							bmp713@yahoo.com<br>
+							Los Angeles, CA<br>
+							(831) 419-0137<br><br>
 						</p>
-					</p>	
-				</div>
+					</div>
+					
+					<div id="content_left_2">
+						<p class="background">
+							<span style="font-size:32px;color:rgba(100,100,100,1);">
+							SOFTWARE EXPERIENCE
+							</span><br><br>
+							FULL STACK WEB DEVELOPER - LOS ANGELES, CA<br>
+							Full Stack Developer (2016-2018)<br>
+							▪ Learned full stack web development<br>
+							▪ Learned HTML, CSS, Javascript, PHP, MySQL, Laravel, Angular, Node<br>
+							▪ Learned all layers of web stack using LAMP/MEAN/Laravel on remote and virtual hosts<br>
+							▪ Learned theory behind responsive design and layout<br><br>
+	
+							VERISIGN - MOUNTAIN VIEW, CA<br>
+							Software Engineer (2007-2009)<br>
+							▪ Developed automation testing for SSL certificate customer service website<br>
+							▪ Developed large number of testing cases using custom methodology<br>
+							▪ Maintained suites of WinRunner scripts<br><br>
+	
+							LYNX SOFTWARE - SAN JOSE, CA<br>
+							Software Engineer (2006-2007)<br>
+							▪ Reverse engineered embedded operating system in C to uncover potential vulnerabilities<br>
+							▪ Developed and maintained Bash automation scripts<br>
+							▪ Provided training for new employees<br>
+							▪ Wrote employee training manual<br><br>
+	
+							UNIVERSITY OF CALIFORNIA, SANTA CRUZ<br>
+							Engineering Tutor (2004-2006)<br>
+							▪ Tutored engineering students in data structures and algorithms with C and Java<br>
+							▪ Led group tutoring sessions for Multicultural Engineering Program<br>
+							▪ Tutored students of varying learning styles and disabilities<br>
+							</p>
+						</p>
+					</div>
+					
+					<div id="content_left_3">
+						<p class="background">
+							<span style="font-size:32px;color:rgba(100,100,100,1);">
+							EDUCATION AND INTERESTS</span><br><br>
+							B.S. Computer Engineering<br>
+							University of California, Santa Cruz<br><br>
+	
+							RELEVANT COURSEWORK<br>
+							▪ Advanced Programming ▪ Computer Architecture ▪ Abstract Data Types/Algorithms<br>
+							▪ Assembly Programming ▪ Computer Networking ▪ Analog Electronic Circuits<br>
+							▪ Operating Systems ▪ Technical Writing ▪ Advanced Statistics<br>
+							▪ Advanced Microprocessor Design ▪ Advanced Logic Design<br>
+							▪ Senior project leader for ground penetrating radar<br><br>
+	
+							Information about completed courses and degree:<br>
+							<a style="color:lightblue;" href="https://www.soe.ucsc.edu/departments/computer-engineering-0" target="#">
+								soe.ucsc.edu/departments/computer-engineering-0
+							</a><br><br>
+							OTHER INTERESTS<br><br>
+							▪ Photography, music, guitar, writing, philosophy, basketball, hiking, running, skiing<br><br>
+	
+							<div id="social_media">
+								<span style="font-size:24px;color:rgba(100,100,100,1);">
+								SOCIAL MEDIA<br><br><br>
+								</span><br><br>
+								<a class="social_button" target="#" href="http://github.com/bmp713">
+									<img src="assets/images/Icon_github_gray.png"></a>
+								<a class="social_button" target="#" href="http://linkedin.com/in/brandon-piper-3311922/">
+									<img src="assets/images/Icon_linkedin.png"></a>
+								<a class="social_button" target="#" href="http://facebook.com/brandon.piper.391">
+									<img src="assets/images/Icon_facebook (2).png"></a>
+								<a class="social_button" target="#" href="http://flickr.com/photos/73331357@N00">
+									<img src="assets/images/Icon_flickr.png"></a><br><br>
+							</div><br><br>
 
-			</div>
+							<div id="social_resume" download href="Resume.doc">
+								Resume.doc
+							</div>
 
-			<div id="content_4">
-				<div class="background"">
+						</p><br>	
+					</div>
+				
+				</div> <!-- End content_left -->
+	
+				<div id="content_right">
+					<div id="content_right_1">
+							<div id="content_5">
+								<h2>Click to enlarge images</h2>
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (307).png')">
+									<img src="assets/images/Portfolio/Screenshot (307).png"></a>
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (311).png')">
+									<img src="assets/images/Portfolio/Screenshot (311).png"></a>
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (310).png')">
+									<img src="assets/images/Portfolio/Screenshot (310).png"></a>
+							</div>
+							<div id="content_6">
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (382).png')">
+									<img src="assets/images/Portfolio/Screenshot (382).png"></a>
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (383).png')">
+									<img src="assets/images/Portfolio/Screenshot (383).png"></a>
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (389).png')">
+								<img src="assets/images/Portfolio/Screenshot (389).png"></a>
+							</div>
+							<div id="content_7">
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (202).png')">
+									<img src="assets/images/Portfolio/Screenshot (202).png"></a>
+								<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (203).png')">
+								<img src="assets/images/Portfolio/Screenshot (203).png"></a>
+									<a onclick="openSlideshow('assets/images/Portfolio/Screenshot (204).png')">
+								<img src="assets/images/Portfolio/Screenshot (204).png"></a>
+							</div>
 
-					<p class="paragraph">
-						<span style="font-size:32px">
-						EDUCATION AND INTERESTS</span><br><br>
-						B.S. Computer Engineering<br>
-						University of California, Santa Cruz<br><br>
+					</div>
 
-						RELEVANT COURSEWORK<br>
-						▪ Advanced Programming ▪ Computer Architecture ▪ Abstract Data Types/Algorithms<br>
-						▪ Assembly Programming ▪ Computer Networking ▪ Analog Electronic Circuits<br>
-						▪ Operating Systems ▪ Technical Writing ▪ Advanced Statistics<br>
-						▪ Advanced Microprocessor Design ▪ Advanced Logic Design<br>
-						▪ Senior project leader for ground penetrating radar<br><br>
+				</div> <!-- End content_right-->
 
-						Information about completed courses and degree:<br>
-						<a style="color:lightblue;" href="https://www.soe.ucsc.edu/departments/computer-engineering-0" target="#">
-							soe.ucsc.edu/departments/computer-engineering-0</a><br><br>
+			</div><!-- End contents --> 
+		
 
-						OTHER INTERESTS<br><br>
-						▪ Photography, music, guitar, writing, philosophy, basketball, hiking, running, skiing<br><br>
+		<div id="copyright">
 
-						SOCIAL MEDIA<br><br>
-						<a target="#" href="http://github.com/bmp713">
-							<img src="assets/images/Icon_github_gray.png"></a>
-						<a target="#" href="http://linkedin.com/in/brandon-piper-3311922/">
-							<img src="assets/images/Icon_linkedin.png"></a>				
-						<a target="#" href="http://facebook.com/brandon.piper.391">
-							<img src="assets/images/Icon_facebook (2).png"></a>
-						<a target="#" href="http://flickr.com/photos/73331357@N00">
-							<img src="assets/images/Icon_flickr.png"></a><br><br>
-					</p><br>
-				</div>
-			</div>
-
-		</div> <!-- End content -->
-
-		<div onclick="closePortfolio()" id="copyright" style="cursor:pointer;">
-			<span style="color:lightgray;font:20px sans-serif;">Portfolio</span>
+			<span style="color:lightgray;font:20px sans-serif;">
+				Portfolio 
 			<span id="copyright_2">
-			&copy;2018 Brandon M Piper
+				&copy;2018 Brandon M Piper
 			</span><br><br><br>
-	    	<a id="copyright_1" download href="Resume.doc" style="float:right">
-			Resume (.doc)
-			</a>
+	    		<a id="copyright_1" download href="Resume.doc" style="float:right">
+					Resume (.doc)
+				</a>
+
 	    	<div id="copyright_navbar">
 				<a class="navbar_copyright" target="#" href="Ferrari/index.html">Ferrari</a>
 		    	<a class="navbar_copyright" target="#" href="Techbook/index.php">Techbook</a>
+				<a class="navbar_copyright" target="#" href="Thinkpad/index.html">Lenovo</a>
 				<a class="navbar_copyright" target="#" href="AJAX/index.html">AJAX</a>
-				<a class="navbar_copyright" target="#" href='wordpress'>Wordpress</a>
-				<a class="navbar_copyright" target="#" href="Arches/index.html">Arches</a>
+				<a class="navbar_copyright" target="#" href='Commerce'>ECommerce</a>
 			</div>
 
 
-		</div>
+		</div> <!-- End content -->
 
 	</div>	<!-- End wrapper -->
-	
+
 </body>
 </html>
 
