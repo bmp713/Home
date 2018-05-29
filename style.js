@@ -1,14 +1,23 @@
 
-var opac = 1;
+var previous = 0;
 window.addEventListener("scroll", parallax_1);
 function parallax_1(){
     if ( window.matchMedia("(min-width: 768px)" ).matches ){
-        opac += 0.05;
+        
+        previous = window.pageYOffset - 1;
         document.querySelector("#portfolio_p").style.left = -window.pageYOffset + 'px';
-        document.querySelector("#portfolio_p").style.opacity = opac;
-
         document.querySelector("#portfolio_header").style.left = window.pageYOffset + 'px';
-            document.querySelector("#portfolio_buttons").style.top = -window.pageYOffset* (3/2) + 'px';
+        document.querySelector("#portfolio_buttons").style.top = -window.pageYOffset* (3/2) + 'px';
+    
+        if( window.pageYOffset >= 100 && window.pageYOffset < 300)
+            document.querySelector("#content_1").setAttribute("style","background-size:"+ window.pageYOffset * 0.8 +"%;");
+        
+        // Scrolling down and up
+        if( previous <= window.pageYOffset ){
+        }
+        if ( previous > window.pageYOffset ){
+        }
+
     }
 }
 
@@ -100,25 +109,17 @@ images[25] = 'assets/images/Portfolio/Screenshot (388).png';
 images[26] = 'assets/images/Portfolio/Screenshot (389).png';
 images[27] = 'assets/images/Portfolio/Screenshot (390).png';
 images[28] = 'assets/images/Portfolio/Screenshot (391).png';
-images[29] = 'assets/images/Portfolio/Screenshot (392).png';
-images[30] = 'assets/images/Portfolio/Screenshot (393).png';
-images[31] = 'assets/images/Portfolio/Screenshot (394).png';
-images[32] = 'assets/images/Portfolio/Screenshot (395).png';
-images[33] = 'assets/images/Portfolio/Screenshot (396).png';
-images[34] = 'assets/images/Portfolio/Screenshot (397).png';
-images[35] = 'assets/images/Portfolio/Screenshot (398).png';
-images[36] = 'assets/images/Portfolio/Screenshot (399).png';
-images[37] = 'assets/images/Portfolio/Screenshot (400).png';
-images[38] = 'assets/images/Portfolio/Screenshot (401).png';
-images[39] = 'assets/images/Portfolio/Screenshot (402).png';
-images[40] = 'assets/images/Portfolio/Screenshot (403).png';
-images[41] = 'assets/images/Portfolio/Screenshot (404).png';
-images[42] = 'assets/images/Portfolio/Screenshot (500).png';
-images[43] = 'assets/images/Portfolio/Screenshot (501).png';
-images[44] = 'assets/images/Portfolio/Screenshot (502).png';
-images[45] = 'assets/images/Portfolio/Screenshot (503).png';
-images[46] = 'assets/images/Portfolio/Screenshot (504).png';
-images[47] = 'assets/images/Portfolio/Screenshot (505).png';
+images[29] = 'assets/images/Portfolio/Screenshot (393).png';
+images[30] = 'assets/images/Portfolio/Screenshot (394).png';
+images[31] = 'assets/images/Portfolio/Screenshot (395).png';
+images[32] = 'assets/images/Portfolio/Screenshot (396).png';
+images[33] = 'assets/images/Portfolio/Screenshot (397).png';
+images[34] = 'assets/images/Portfolio/Screenshot (398).png';
+images[35] = 'assets/images/Portfolio/Screenshot (399).png';
+images[36] = 'assets/images/Portfolio/Screenshot (400).png';
+images[37] = 'assets/images/Portfolio/Screenshot (401).png';
+images[38] = 'assets/images/Portfolio/Screenshot (402).png';
+images[39] = 'assets/images/Portfolio/Screenshot (504).png';
 
 function slideImage( elementSrc ){
     var slide = document.querySelector("#image");

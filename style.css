@@ -9,17 +9,6 @@ a{ cursor: pointer; text-decoration: none; }
 	from{ 	opacity: 0; }
    	to  { 	opacity: 1; }
 }
-#video_container{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 90%;
-	background: rgba(10, 10, 10, 1);
-}
-#video_container video{
-	position: relative;
-	z-index: -99;
-}
 #wrapper{
 	overflow: hidden;
 	position: relative;
@@ -32,7 +21,7 @@ a{ cursor: pointer; text-decoration: none; }
 	width: 100%;
 	float: left;
 	height: 150px;
-	z-index: 1;
+	z-index: 3;
 	padding: 50px 25px 0px 25px;
 
 	cursor: pointer;
@@ -42,18 +31,16 @@ a{ cursor: pointer; text-decoration: none; }
 	transition: color 1s, box-shadow 1s;
 	animation: fadein 2s;
 }
+/*
 #header:hover{
 	transition: color 1s, box-shadow 1s;
 	color: white;
 	height: 150px;
 	z-index: 99;
 }
+*/
 	#header:hover #resume_header{
 		color: rgba(5, 5, 30, 1);
-		transition: color 1s;
-	}
-	#header:hover #header_title{
-		color: lightgray;
 		transition: color 1s;
 	}
 	#header_name{
@@ -69,22 +56,26 @@ a{ cursor: pointer; text-decoration: none; }
 	#header_title{
 		float: right;
 		padding-top: 5px;
-		color: white;
+		color: darkgray;
 		font: 20px sans-serif;
 		animation: fadein 2s;
 		transition: color 1s;
 	}
-	#resume_header{
+	#header_resume{
 		float: right;
 		font-size: 16px;
 		cursor: pointer;
-		color: white;
+		color: lightgray;
 		transition: color 1s;
 		animation: fadein 8s;
 	}
-	#resume_header:hover{
+	#header:hover #header_title{
+		color: lightgray;
 		transition: color 1s;
-		color: gray;
+	}
+	#header:hover #header_resume{
+		color: black;
+		transition: color 1s;
 	}
 	.navbar{
 		overflow: hidden;
@@ -126,7 +117,7 @@ a{ cursor: pointer; text-decoration: none; }
 	}
 	#slideNav{
 		background: rgba(10, 10, 20, 0.8);
-		border: 1px solid rgba(10, 10, 20, 0.8);
+		border: 1px solid white;
 		transition: border 1s, color 1s;
 	}
 	#slideNav:hover{
@@ -160,6 +151,8 @@ a{ cursor: pointer; text-decoration: none; }
 			top: 0;
 			z-index: 91;
 			cursor: pointer;
+			transition: filter 1s;
+			filter: opacity(70%);
 		}
 		#image{
 			padding-top: 5%;
@@ -171,6 +164,12 @@ a{ cursor: pointer; text-decoration: none; }
 			left: 0;
 			z-index: 92;
 			cursor: pointer;
+			transition: filter 1s;
+			filter: brightness(75%);
+		}
+		#image:hover{
+			transition: filter 1s;
+			filter: brightness(110%);
 		}
 
 	#content{
@@ -184,19 +183,17 @@ a{ cursor: pointer; text-decoration: none; }
 
 	#content_1{
 		position: relative;
-		margin: 100px auto 200px auto;
+		margin: -100px auto 200px auto;
 		padding: 150px 50px 400px 50px;
 
 		display: block;
 		float: left; /* Parent of floated elements must be float/clear or specific height */
 		width: 65%;
 		z-index: 1;
-
-		color: gray;
-		/*
-		background: url("assets/images/apple_desktop.jpeg") no-repeat fixed;
+		
+		background: url("assets/images/apple_keys_4.jpg") no-repeat fixed;
 		background-size: cover;
-		*/
+		
 		text-align: center;
 		transition: color 1s;
 	}
@@ -220,19 +217,20 @@ a{ cursor: pointer; text-decoration: none; }
 
 		#portfolio{
 			position: relative;
-			margin: 0px auto;
+			margin: 150px auto 0px auto;
 			padding: 50px 0px 10px 0px;;
 			z-index: 0;
 			float: none;
 			left: none;
 
+			color: rgba(100, 100, 100, 1);
 			text-align: center;
 			font: 16px sans-serif;
 		}
 		#portfolio_header{
 			position: relative;
 			left: none; /* Allows element to float outside of div in Javascript */
-			color: darkgray;
+			color: inherit;
 			font: 42px sans-serif;
 		}
 		#portfolio_buttons{
@@ -254,7 +252,7 @@ a{ cursor: pointer; text-decoration: none; }
 			color: white;
 			font: 14px sans-serif;
 			border: 1px solid white;
-			background: rgba(1, 1, 70, 1);
+			background: rgba(1, 1, 30, 0.7);
 			transition: background 1s, color 1s, border 1s;
 		}
 		.portfolio_button:hover{
@@ -268,7 +266,7 @@ a{ cursor: pointer; text-decoration: none; }
 			padding: 50px 0 50px 0;
 			clear: both;
 			left: none;
-			color: darkgray;
+			color: inherit;
 			font: 14px sans-serif;
 		}
 		#portfolio_p img{
@@ -292,13 +290,12 @@ a{ cursor: pointer; text-decoration: none; }
 			background: rgba(10, 10, 20, 0.5);
 			box-shadow: 10px 10px 10px black;
 		}*/
-
 		
 	#contents{
     	position: relative;
     	margin: auto;
 		width: 100%;
-		z-index: 0;
+		z-index: 2;
 	}
 
 	.background{
@@ -322,14 +319,16 @@ a{ cursor: pointer; text-decoration: none; }
 
     	#content_left{
         	position: relative;
-        	margin: -400px 0px;
+        	margin: -300px 0px;
         	float: left;
 			width: 65%;
 			z-index: 100;
 
 			font: 24px sans-serif;
-        	background: url("assets/images/servers_5.jpg") no-repeat fixed;
-        	background-size: cover;
+			
+			background: url("assets/images/servers_5.jpg") no-repeat fixed;
+			background-size: cover;
+			
         	transition: width 1s;
         	animation: fadein 2s;
     	}
@@ -390,7 +389,6 @@ a{ cursor: pointer; text-decoration: none; }
 				background: rgba(20, 10, 10, 0.5);
 			}
 
-			
 	        #content_left_4{
     	        position: relative;
         	    margin: 0px auto 0px auto;
@@ -408,23 +406,31 @@ a{ cursor: pointer; text-decoration: none; }
 				background: rgba(20, 10, 10, 0.5);
 			}
 
-
 			#social_media{
 				position: relative;
-				margin: auto;
-				width: inherit;
-				padding: 50px 50px;
-				text-align: center;
+				margin: 0 auto 0 auto;
+				width: 100%;
+				left: 30%;
+				text-align: left;
 			}
 			.social_button{
 				position: relative;
 				margin: auto;
-				padding: 0px 40px;
 			}
 			.social_button img{
+				position: relative;
+				margin: auto;
 				width: 10%;
+				float: left;
+				padding: 0px 20px 0 0;
+				transition: width 1s;
+			}
+			.social_button:hover img{
+				transition: width 1s;
+				width: 15%;
 			}
 			#social_resume{
+				display: none;
 				position: relative;
 				margin: auto;
 				width: 50%;
@@ -446,12 +452,14 @@ a{ cursor: pointer; text-decoration: none; }
 	    #content_right{
     	    position: relative;
         	float: right;
-	        margin: -2275px 0px 0px 0px;
+	        margin: -2225px 0px 0px 0px;
 			width: 35%;
 			z-index: 0;
 			text-align: center;
+			/*
 			background: url("assets/images/servers_4.jpg") no-repeat fixed;
 			background: cover;
+			*/
 	        transition: width 1s;
     	    animation: fadein 2s;
     	}
@@ -470,7 +478,7 @@ a{ cursor: pointer; text-decoration: none; }
 
             	color: white;
 				background: url("assets/images/iphone-ipad-apple (2).jpg") no-repeat fixed;
-            	background-size: 100%;
+            	background-size: cover;
             	animation: fadein 2s;
 			}
 			#content_5 img{
@@ -496,7 +504,7 @@ a{ cursor: pointer; text-decoration: none; }
 
 	            color: white;
 				background: url("assets/images/keyboard_button.jpg") no-repeat fixed;
-        	    background-size: 100%;
+        	    background-size: cover;
             	animation: fadein 2s;
 			}
 			#content_6 img{
@@ -522,7 +530,7 @@ a{ cursor: pointer; text-decoration: none; }
 
 	            color: white;
 				background: url("assets/images/keyboard_button.jpg") no-repeat fixed;
-        	    background-size: 100%;
+        	    background-size: cover;
             	animation: fadein 2s;
 			}
 			#content_7 img{
@@ -596,14 +604,85 @@ a{ cursor: pointer; text-decoration: none; }
 			border: 1px solid white;
 			color: white;
 		}
-
-		
+/*
+#video_container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 90%;
+	background: rgba(10, 10, 10, 1);
+}
+#video_container video{
+	position: relative;
+	z-index: -99;
+}
+*/		
 @keyframes fadein{
 	from{ 	opacity: 0; }
    	to  { 	opacity: 1; }
 }
 
+@media( max-width: 1200px ){
 
+	#header_title{
+		float: none;
+		padding-top: 5px;
+		color: darkgray;
+		font: 16px sans-serif;
+		animation: fadein 2s;
+		transition: color 1s;
+	}
+	#header_resume{
+		float: none;
+		font-size: 12px;
+		cursor: pointer;
+		color: lightgray;
+		transition: color 1s;
+		animation: fadein 8s;
+	}
+	#portfolio_buttons{
+		position: relative;
+		display: block;
+		margin: auto;
+		width: 80%;
+		left: none;
+		padding: 50px 50px;
+	}
+	.portfolio_button{
+		display: block;
+		position: relative;
+		margin: 10px auto;
+		float: none;
+		width: 100%;
+		left: none;
+		padding: 10px 20px;
+
+		color: white;
+		font: 12px sans-serif;
+		border: 1px solid white;
+		background: rgba(1, 1, 50, 0.7);
+		transition: background 1s;
+	}
+	/*
+	#portfolio_p{
+		 margin: -600px 0px 0px 0px;
+	 }
+	 */
+	.portfolio_button:hover{
+		transition: background 1s;
+		background: rgba(1, 1, 50, 0);
+	}
+	.background{
+		padding: 50px 10px;
+	}
+
+	#content_right{
+		position: relative;
+		float: right;
+		margin: -2575px 0px 0px 0px;
+		width: 35%;
+	}
+}
 
 @media( max-width: 768px ){
 
@@ -712,6 +791,7 @@ a{ cursor: pointer; text-decoration: none; }
 			display: block;
 			font: 14px sans-serif; /* Title size decreases size in mobile view */
 			padding: 0px 0px 0px 0px;
+			color: white;
 		}
 		#portfolio{
 			position: relative;
@@ -721,6 +801,7 @@ a{ cursor: pointer; text-decoration: none; }
 			float: none;
 			left: none;
 			width: 100%;
+			color: white;
 
 			text-align: center;
 			font: 16px sans-serif;
@@ -762,6 +843,7 @@ a{ cursor: pointer; text-decoration: none; }
 			padding: 50px 0;
 			clear: both;
 			left: none;
+			color: white;
 		}
 		#portfolio_p img{
 			width: 25%;
@@ -860,27 +942,57 @@ a{ cursor: pointer; text-decoration: none; }
 				width: 100%;
 				transition: width 1s;
 			}
+		    #content_left_4{
+    	        position: relative;
+        	    margin: 0px auto 0px auto;
+            	padding: 250px 100px 1800px 100px;
+	            width: 100%;
+    	        z-index: 10;
+        	    color: white;
+            	cursor: pointer;
+	            background: rgba(20, 10, 10, 0.7);
+    	        transition: background 1s;
+        	    animation: fadein 2s;
+        	}
+        	#content_left_4:hover{
+				transition: background 1s;
+				background: rgba(20, 10, 10, 0.5);
+			}
+
 			#social_media{
 				position: relative;
-				margin: -500px auto 0px auto;
-				width: 100%;
-				padding: 75px 0px;
+				margin: auto;
+				width: inherit;
+				padding: 50px 50px;
 				text-align: center;
-				font: 16 sans-serif;
 			}
-			#social_media img{
-				padding: 10px 50px 10px 50px;
+			.social_button{
+				position: relative;
+				margin: auto;
+				padding: 20px 10px;
+			}
+			.social_button img{
 				width: 50%;
 			}
 			#social_resume{
+				display: none;
 				position: relative;
 				margin: auto;
-				color: white;
+				width: 50%;
+				padding: 10px 0px;
+
 				text-align: center;
 				font: 16px sans-serif;
-				padding: 20px;
-				border: 2px solid white;
+				border: 1px solid lightgray;
+				background: rgba(100, 100, 100, 0.7);
+				transition: border 1s, background 1s;
 			}
+			#social_resume:hover{
+				transition: border 1s, background 1s;
+				background: rgba(100, 100, 100, 0);
+				border: 1px solid white;
+			}
+
 			
 			#content_right{
 				display: none;
