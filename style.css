@@ -307,7 +307,7 @@ a{ cursor: pointer; text-decoration: none; }
 
 		box-shadow: none;
 		font: 14px sans-serif;
-		background: rgba(50, 50, 50, 0.7);
+		background: rgba(10, 10, 10, 0.6);
 		transition: background 1s, box-shadow 1s, color 2s, transform 2s;
 	}
 	.background:hover{
@@ -363,13 +363,17 @@ a{ cursor: pointer; text-decoration: none; }
     	        z-index: 10;
         	    color: white;
             	cursor: pointer;
-	            background: rgba(10, 20, 10, 0.7);
+	            /*background: rgba(10, 20, 10, 0.7);*/
+				background: url("assets/images/laptop (7).jpg") no-repeat fixed;
+				background-size: cover;
     	        transition: background 1s;
         	    animation: fadein 2s;
         	}
         	#content_left_2:hover{
             	transition: background 1s;
-            	background: rgba(10, 20, 10, 0.5);
+				background: url("assets/images/laptop (7).jpg") no-repeat fixed;
+				background-size: cover;
+            	/*background: rgba(10, 20, 10, 0.5);*/
 			}
 
 	        #content_left_3{
@@ -380,13 +384,13 @@ a{ cursor: pointer; text-decoration: none; }
     	        z-index: 10;
         	    color: white;
             	cursor: pointer;
-	            background: rgba(20, 10, 10, 0.7);
-    	        transition: background 1s;
+	            background: rgba(20, 10, 10, 0.7);    	        
+				transition: background 1s;
         	    animation: fadein 2s;
         	}
         	#content_left_3:hover{
 				transition: background 1s;
-				background: rgba(20, 10, 10, 0.5);
+				background: rgba(20, 10, 10, 0.5); 
 			}
 
 	        #content_left_4{
@@ -403,7 +407,7 @@ a{ cursor: pointer; text-decoration: none; }
         	}
         	#content_left_4:hover{
 				transition: background 1s;
-				background: rgba(20, 10, 10, 0.5);
+				background: rgba(20, 10, 10, 0.5); 		
 			}
 
 			#social_media{
@@ -862,7 +866,7 @@ a{ cursor: pointer; text-decoration: none; }
 	    	#content_left{
     	    	position: relative;
         		margin: 0px 0px;
-        		float: left;
+        		float: none;
 				width: 100%;
 				height: auto;
 				z-index: 100;
@@ -872,7 +876,7 @@ a{ cursor: pointer; text-decoration: none; }
 			}
 			.background{
 				position: relative;
-				padding: 50px 10px;
+				padding: 50px 0px;
 				color: lightgray;
 				width: 100%;
 				z-index: 0;
@@ -923,7 +927,8 @@ a{ cursor: pointer; text-decoration: none; }
 				background-size: cover;
 			}
 			#content_left_2:hover{
-				z-index: 10;
+				background: url("assets/images/iphone-ipad-apple (2).jpg") no-repeat fixed;
+				background-size: cover;
 			}
 			#content_left_3{
 				position: relative;
@@ -938,14 +943,18 @@ a{ cursor: pointer; text-decoration: none; }
 				animation: fadein 2s;
 			}
 			#content_left_3:hover{
-				z-index: 10;
-				width: 100%;
-				transition: width 1s;
+				background: url("assets/images/keyboard_button.jpg") no-repeat fixed;
+				background-size: cover;
+				transition: none;
 			}
+
+
+
+
 		    #content_left_4{
     	        position: relative;
         	    margin: 0px auto 0px auto;
-            	padding: 250px 100px 1800px 100px;
+            	padding: 100px 0px 0px 0px;
 	            width: 100%;
     	        z-index: 10;
         	    color: white;
@@ -956,29 +965,37 @@ a{ cursor: pointer; text-decoration: none; }
         	}
         	#content_left_4:hover{
 				transition: background 1s;
-				background: rgba(20, 10, 10, 0.5);
+				background: rgba(20, 10, 10, 0.5); 		
 			}
 
 			#social_media{
 				position: relative;
-				margin: auto;
-				width: inherit;
-				padding: 50px 50px;
-				text-align: center;
+				margin: 0 0 0 0;
+				width: 100%;
+				left: 0;
+				text-align: left;
 			}
 			.social_button{
 				position: relative;
 				margin: auto;
-				padding: 20px 10px;
 			}
 			.social_button img{
-				width: 50%;
+				position: relative;
+				margin: auto;
+				width: 15%;
+				float: left;
+				padding: 0px 0px 0px 0px;
+				transition: width 1s;
+			}
+			.social_button:hover img{
+				transition: none;
+				width: 15%;
 			}
 			#social_resume{
 				display: none;
 				position: relative;
 				margin: auto;
-				width: 50%;
+				width: 100%;
 				padding: 10px 0px;
 
 				text-align: center;
@@ -993,10 +1010,15 @@ a{ cursor: pointer; text-decoration: none; }
 				border: 1px solid white;
 			}
 
+
 			
-			#content_right{
-				display: none;
-			}
+		#content_right{
+			display: none;			
+			position: relative;
+			float: right;
+			margin: 0px 0px 0px 0px;
+			width: 0%;
+		}
 
 
 	#copyright{
@@ -1030,10 +1052,12 @@ a{ cursor: pointer; text-decoration: none; }
 			color: gray;
 		}
 		#copyright_2{
+			display: none;
 			float: none;
 		}
 
 		.navbar_copyright{
+			display: none;
 			position: relative;
 			margin: 30px auto 0px auto;
 			height: 150px;
