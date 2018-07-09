@@ -70,32 +70,57 @@ function copyrightMenu(){
         copyrightOpen = false;
     }
 }
+function closeCopyrightMenu(){
+    var copyright = document.querySelector("#copyright");
+    copyright.style.height = '40px';
+    copyrightOpen = true;
+}
 
 
 var i = 0;
 var images = [];
 var slideshowOpen = false;
 images = [
-'assets/images/Portfolio/Screenshot (201).png','assets/images/Portfolio/Screenshot (202).png',
-'assets/images/Portfolio/Screenshot (203).png','assets/images/Portfolio/Screenshot (204).png',
-'assets/images/Portfolio/Screenshot (205).png','assets/images/Portfolio/Screenshot (206).png',
-'assets/images/Portfolio/Screenshot (207).png','assets/images/Portfolio/Screenshot (208).png',
-'assets/images/Portfolio/Screenshot (209).png','assets/images/Portfolio/Screenshot (211).png',
-'assets/images/Portfolio/Screenshot (213).png','assets/images/Portfolio/Screenshot (307).png',
-'assets/images/Portfolio/Screenshot (308).png','assets/images/Portfolio/Screenshot (309).png',
-'assets/images/Portfolio/Screenshot (310).png','assets/images/Portfolio/Screenshot (311).png',
-'assets/images/Portfolio/Screenshot (312).png','assets/images/Portfolio/Screenshot (380).png',
-'assets/images/Portfolio/Screenshot (381).png','assets/images/Portfolio/Screenshot (382).png',
-'assets/images/Portfolio/Screenshot (383).png','assets/images/Portfolio/Screenshot (384).png',
-'assets/images/Portfolio/Screenshot (385).png','assets/images/Portfolio/Screenshot (386).png',
-'assets/images/Portfolio/Screenshot (387).png','assets/images/Portfolio/Screenshot (388).png',
-'assets/images/Portfolio/Screenshot (389).png','assets/images/Portfolio/Screenshot (390).png',
-'assets/images/Portfolio/Screenshot (391).png','assets/images/Portfolio/Screenshot (393).png',
-'assets/images/Portfolio/Screenshot (394).png','assets/images/Portfolio/Screenshot (395).png',
-'assets/images/Portfolio/Screenshot (396).png','assets/images/Portfolio/Screenshot (397).png',
-'assets/images/Portfolio/Screenshot (398).png','assets/images/Portfolio/Screenshot (399).png',
-'assets/images/Portfolio/Screenshot (400).png','assets/images/Portfolio/Screenshot (401).png',
-'assets/images/Portfolio/Screenshot (402).png','assets/images/Portfolio/Screenshot (504).png'
+'assets/images/Portfolio/Screenshot (204).png',
+'assets/images/Portfolio/Screenshot (203).png',
+'assets/images/Portfolio/Screenshot (202).png',
+'assets/images/Portfolio/Screenshot (201).png',
+'assets/images/Portfolio/Screenshot (205).png',
+'assets/images/Portfolio/Screenshot (206).png',
+'assets/images/Portfolio/Screenshot (207).png',
+'assets/images/Portfolio/Screenshot (208).png',
+'assets/images/Portfolio/Screenshot (209).png',
+'assets/images/Portfolio/Screenshot (211).png',
+'assets/images/Portfolio/Screenshot (213).png',
+'assets/images/Portfolio/Screenshot (307).png',
+'assets/images/Portfolio/Screenshot (308).png',
+'assets/images/Portfolio/Screenshot (309).png',
+'assets/images/Portfolio/Screenshot (310).png',
+'assets/images/Portfolio/Screenshot (311).png',
+'assets/images/Portfolio/Screenshot (312).png',
+'assets/images/Portfolio/Screenshot (380).png',
+'assets/images/Portfolio/Screenshot (381).png',
+'assets/images/Portfolio/Screenshot (382).png',
+'assets/images/Portfolio/Screenshot (383).png',
+'assets/images/Portfolio/Screenshot (384).png',
+'assets/images/Portfolio/Screenshot (385).png',
+'assets/images/Portfolio/Screenshot (386).png',
+'assets/images/Portfolio/Screenshot (387).png',
+'assets/images/Portfolio/Screenshot (388).png',
+'assets/images/Portfolio/Screenshot (389).png',
+'assets/images/Portfolio/Screenshot (390).png',
+'assets/images/Portfolio/Screenshot (391).png',
+'assets/images/Portfolio/Screenshot (393).png',
+'assets/images/Portfolio/Screenshot (394).png',
+'assets/images/Portfolio/Screenshot (395).png',
+'assets/images/Portfolio/Screenshot (396).png',
+'assets/images/Portfolio/Screenshot (397).png',
+'assets/images/Portfolio/Screenshot (398).png',
+'assets/images/Portfolio/Screenshot (399).png',
+'assets/images/Portfolio/Screenshot (400).png',
+'assets/images/Portfolio/Screenshot (401).png',
+'assets/images/Portfolio/Screenshot (402).png',
+'assets/images/Portfolio/Screenshot (504).png'
 ]
 
 function slideImage( elementSrc ){
@@ -119,6 +144,7 @@ function openSlideshow( elementSrc ){
         closeSlideshow();
     }
     else{
+        closeCopyrightMenu();
         slideImage( elementSrc );
         slideshowOpen = true;
         document.querySelector("#slideshow").style.height = "100%";
