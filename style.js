@@ -6,20 +6,20 @@ window.onload = function ( elementID ){
 	var timer = setInterval( function(){
 		if( backgroundSize < 150 && zoom ){
 			document.querySelector("#content_5").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
-            document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
-            document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
-        }
+           		document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
+            		document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
+        	}
 		else{
 			if( backgroundSize >= 150 ){
-                zoom = false;
-            }
-            else if( backgroundSize < 100 ){
-                zoom = true;
-            }
-            document.querySelector("#content_5").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
-            document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
-            document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
-        }
+                		zoom = false;
+            		}
+	        	else if( backgroundSize < 100 ){
+                		zoom = true;
+            		}
+            		document.querySelector("#content_5").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
+            		document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
+           		document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
+        	}	
 	}, 50);
 }
 
@@ -27,7 +27,6 @@ var previous = 0;
 window.addEventListener("scroll", parallax_1);
 function parallax_1(){
     if ( window.matchMedia("(min-width: 768px)" ).matches ){
-        
         previous = window.pageYOffset - 1;
         document.querySelector("#portfolio_p").style.left = -window.pageYOffset + 'px';
         document.querySelector("#portfolio_header").style.left = window.pageYOffset + 'px';
@@ -41,7 +40,7 @@ function parallax_1(){
 window.addEventListener("scroll", parallax_2);
 function parallax_2(){
     if ( window.matchMedia("(min-width: 768px)" ).matches ){
-        document.getElementById("content_right").style.top = window.pageYOffset/2 + 'px';
+        document.querySelector("#content_right").style.top = window.pageYOffset/2 + 'px';
     }
 }
 
