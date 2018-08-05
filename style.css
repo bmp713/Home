@@ -465,11 +465,12 @@ a{ cursor: pointer; text-decoration: none; }
 	        #content_5{
     	        position: relative;
         	    margin: auto;
-            	padding: 50px 50px 50px 50px;
+            	padding: 50px 50px 350px 50px;
             	width: 100%;
 
-            	color: white;
-				background: url("assets/images/iphone-ipad-apple (2).jpg") no-repeat fixed;
+				color: white;
+				background: url("assets/images/apple_9.jpg") no-repeat fixed;
+
             	background-size: cover;
             	animation: fadein 2s;
 			}
@@ -491,11 +492,11 @@ a{ cursor: pointer; text-decoration: none; }
 			#content_6{
             	position: relative;
             	margin: auto;
-	            padding: 50px 50px 50px 50px;
+	            padding: 50px 50px 1600px 50px;
     	        width: 100%;
 
 	            color: white;
-				background: url("assets/images/keyboard_button.jpg") no-repeat fixed;
+				background: url("assets/images/iphone-ipad-apple (2).jpg") no-repeat fixed;
         	    background-size: cover;
             	animation: fadein 2s;
 			}
@@ -587,7 +588,7 @@ a{ cursor: pointer; text-decoration: none; }
 			color: lightgray;
 			border: 1px solid darkgray;
 			padding: 10px 5% 10px 5%;
-			background: rgba( 1, 1, 50, 0.5);
+			background: rgba(10, 10, 50, 0.5);
 			transition: background 1s, color 1s, border 1s;
 		}
 		.navbar_copyright:hover{
@@ -1122,12 +1123,12 @@ a{ cursor: pointer; text-decoration: none; }
 			color: lightgray;
 			border: 1px solid darkgray;
 			padding: 10px 5% 10px 5%;
-			background: rgba( 1, 1, 50, 0.5);
+			background: rgba( 50, 50, 50, 0.3);
 			transition: background 1s, color 1s, border 1s;
 		}
 		.navbar_copyright:hover{
 			transition: background 1s, color 1s, border 1s;
-			background: rgba(10, 10, 50, 0);
+			background: rgba(50, 50, 50, 0);
 			border: 1px solid white;
 			color: white;
 		}

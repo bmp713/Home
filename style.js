@@ -1,4 +1,28 @@
 
+// Zoom in and out of background
+window.onload = function ( elementID ){
+	var zoom = true;
+	var backgroundSize = 100;
+	var timer = setInterval( function(){
+		if( backgroundSize < 150 && zoom ){
+			document.querySelector("#content_5").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
+            document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
+            document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
+        }
+		else{
+			if( backgroundSize >= 150 ){
+                zoom = false;
+            }
+            else if( backgroundSize < 100 ){
+                zoom = true;
+            }
+            document.querySelector("#content_5").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
+            document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
+            document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
+        }
+	}, 50);
+}
+
 var previous = 0;
 window.addEventListener("scroll", parallax_1);
 function parallax_1(){
@@ -11,7 +35,6 @@ function parallax_1(){
     
         if( window.pageYOffset >= 100 && window.pageYOffset < 300)
             document.querySelector("#content_1").setAttribute("style","background-size:"+ window.pageYOffset * 0.8 +"%;");
-
     }
 }
 
@@ -52,7 +75,6 @@ function smoothScroll( elementId ){
     }, speed );
 }
 
-
 window.addEventListener("scroll", copyrightMenu);
 var copyrightOpen = false;
 function copyrightMenu(){
@@ -75,7 +97,6 @@ function closeCopyrightMenu(){
     copyright.style.height = '40px';
     copyrightOpen = true;
 }
-
 
 var i = 0;
 var images = [];
@@ -139,6 +160,7 @@ function slideImage( elementSrc ){
             i = 0;
     }    
 }
+
 function openSlideshow( elementSrc ){
     if( slideshowOpen ){
         closeSlideshow();
@@ -153,6 +175,7 @@ function openSlideshow( elementSrc ){
 
     }
 }
+
 function closeSlideshow(){
     i = 0;
     slideshowOpen = false;
