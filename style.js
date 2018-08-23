@@ -4,22 +4,15 @@ window.onload = function ( elementID ){
 	var zoom = true;
 	var backgroundSize = 100;
 	var timer = setInterval( function(){
-		if( backgroundSize < 150 && zoom ){
-			document.querySelector("#content_5").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
-           		document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
-            		document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize+=0.05) +"%;");
-        	}
-		else{
-			if( backgroundSize >= 150 ){
-                		zoom = false;
-            		}
-	        	else if( backgroundSize < 100 ){
-                		zoom = true;
-            		}
-            		document.querySelector("#content_5").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
-            		document.querySelector("#content_left").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
-           		document.querySelector("#content_6").setAttribute("style","background-size:"+ (backgroundSize-=0.05) +"%;");
-        	}	
+		if( backgroundSize < 125 && zoom) backgroundSize += 0.1;   
+        else{
+            zoom = false;
+            backgroundSize -= 0.1;   
+            if( backgroundSize < 100 ) zoom = true;
+        }
+        document.querySelector("#content_left_2").setAttribute("style","background-size:"+ backgroundSize +"%;");
+        document.querySelector("#content_left").setAttribute("style","background-size:"+ backgroundSize +"%;");
+        console.log( backgroundSize );
 	}, 50);
 }
 
@@ -31,16 +24,17 @@ function parallax_1(){
         document.querySelector("#portfolio_p").style.left = -window.pageYOffset + 'px';
         document.querySelector("#portfolio_header").style.left = window.pageYOffset + 'px';
         document.querySelector("#portfolio_buttons").style.top = -window.pageYOffset* (3/2) + 'px';
-    
-        if( window.pageYOffset >= 100 && window.pageYOffset < 300)
-            document.querySelector("#content_1").setAttribute("style","background-size:"+ window.pageYOffset * 0.8 +"%;");
+
+        if( window.pageYOffset > 100 )
+            var size = window.pageYOffset;
+            document.querySelector("#content_1").setAttribute("style","background-size:"+ size +"%;");
     }
 }
 
 window.addEventListener("scroll", parallax_2);
 function parallax_2(){
     if ( window.matchMedia("(min-width: 768px)" ).matches ){
-        document.querySelector("#content_right").style.top = window.pageYOffset/2 + 'px';
+        document.getElementById("content_right").style.top = window.pageYOffset/2 + 'px';
     }
 }
 
@@ -51,7 +45,7 @@ function smoothScroll( elementId ){
     var current = window.pageYOffset;
     var destination = document.querySelector( '#' + elementId ).offsetTop;
     console.log("destination: " + destination );
-   
+
     var timer = setInterval( function(){
         if( current <= destination ){
             current = current + offset;
@@ -73,6 +67,7 @@ function smoothScroll( elementId ){
         }
     }, speed );
 }
+
 
 window.addEventListener("scroll", copyrightMenu);
 var copyrightOpen = false;
@@ -96,6 +91,7 @@ function closeCopyrightMenu(){
     copyright.style.height = '40px';
     copyrightOpen = true;
 }
+
 
 var i = 0;
 var images = [];
@@ -157,9 +153,8 @@ function slideImage( elementSrc ){
             i++;
         else
             i = 0;
-    }    
+    }
 }
-
 function openSlideshow( elementSrc ){
     if( slideshowOpen ){
         closeSlideshow();
@@ -174,7 +169,6 @@ function openSlideshow( elementSrc ){
 
     }
 }
-
 function closeSlideshow(){
     i = 0;
     slideshowOpen = false;
